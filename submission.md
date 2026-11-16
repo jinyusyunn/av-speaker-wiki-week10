@@ -43,7 +43,7 @@ Wiki 查詢 Top-1 測試 **7/7 通過**；例如「人臉追蹤」找到 face-tr
 
 實作流程為 Source Collection → Ingest → Wiki Generation → Wiki Retrieval → Outline → Fact Check → Slide Generation → HTML Validation → Publish Readiness。每節點輸入、輸出、檢查、fallback 與 2 次重試上限見 workflow/graph.md。資料不足回到 ingestion，引用錯誤回到 Wiki generation，網頁錯誤回到 slide generation。
 
-首次完整 run 20261111T174421Z 因 tests/ 目錄未建立而在 HTML Validation 發生 FileNotFoundError，實際回退與重試兩次後停止；修正初始化後完整執行成功。最新成功 run 為 `20261116T174119Z`。每次節點起訖時間、錯誤與 traceback 保留在 workflow/runs/；最新摘要為 workflow/execution_log.md。
+首次完整 run 20261111T174421Z 因 tests/ 目錄未建立而在 HTML Validation 發生 FileNotFoundError，實際回退與重試兩次後停止；修正初始化後完整執行成功。最新成功 run 為 `20261116T174353Z`。每次節點起訖時間、錯誤與 traceback 保留在 workflow/runs/；最新摘要為 workflow/execution_log.md。
 
 另一次真實前期問題是 TalkNet 候選 arXiv ID 指向數學論文。閱讀第一頁發現後已隔離錯誤資料、改用正確 2107.06592，並把標題 gate 移到成功 ingest 之前；最終資料不含錯誤論文。
 

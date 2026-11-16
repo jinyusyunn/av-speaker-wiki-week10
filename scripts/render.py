@@ -35,7 +35,7 @@ def render(entries,outline,manifest):
  site=ROOT/'site';site.mkdir(exist_ok=True)
  shutil.copytree(ROOT/'assets',site/'assets',dirs_exist_ok=True)
  (site/'.nojekyll').write_text('',encoding='utf-8')
- write=lambda name,text:(site/name).write_text(text,encoding='utf-8')
+ write=lambda name,text:(site/name).write_text(text,encoding='utf-8',newline='\n')
  entrymap={e['id']:e for e in entries}
  wiki='<main id="main" class="wrap"><p class="kicker">TRACEABLE KNOWLEDGE / 可檢索與查證</p><h1>AV Speaker Wiki</h1><p>9 個概念條目，連回 7 篇已 ingest 的原始論文。繁中轉述由本次 Codex LLM 整理；詞彙查詢與證據定位由程式執行。教學推論另行標示。</p><label for="wiki-search">搜尋概念（中英關鍵字，如：人臉、TalkNet、DER）</label><input id="wiki-search" class="search" type="search" placeholder="輸入關鍵字；多詞取交集"><p id="search-status" role="status" aria-live="polite"></p>'
  for e in entries:

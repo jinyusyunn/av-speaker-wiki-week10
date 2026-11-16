@@ -1,0 +1,2 @@
+# Publish the exact bytes that passed the artifact SHA-256 gate.
+site/** -text

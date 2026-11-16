@@ -4,5 +4,35 @@
     "action": "repository_created",
     "repository_url": "https://github.com/jinyusyunn/av-speaker-wiki-week10",
     "visibility": "public"
+  },
+  {
+    "time": "2026-11-16T17:42:29.120578+00:00",
+    "action": "git_push",
+    "commit": "9cf5c730aee274582a545d5f90341cc76127a6cf",
+    "branch": "main",
+    "files_changed": 70,
+    "repository_url": "https://github.com/jinyusyunn/av-speaker-wiki-week10"
+  },
+  {
+    "time": "2026-11-16T17:42:38.276400+00:00",
+    "action": "pages_configured_and_workflow_dispatched",
+    "build_type": "workflow",
+    "candidate_url": "https://jinyusyunn.github.io/av-speaker-wiki-week10/"
+  },
+  {
+    "time": "2026-11-16T17:43:06.692756+00:00",
+    "action": "actions_failure",
+    "run_url": "https://github.com/jinyusyunn/av-speaker-wiki-week10/actions/runs/43921209171",
+    "jobs": [
+      {
+        "name": "deploy",
+        "steps": [
+          {
+            "name": "Check static artifact",
+            "conclusion": "failure"
+          }
+        ]
+      }
+    ]
   }
 ]

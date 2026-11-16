@@ -1,5 +1,11 @@
 # 根據實際執行的反思
 
+## 11 月 17 日實際部署追加紀錄
+
+使用者確認上傳 GitHub 後，已建立公開 repository。第一次 GitHub Actions 在 Check static artifact 失敗：Windows 產生的 HTML 含 CRLF，Git 正規化後變 LF，導致公開 artifact 的 SHA-256 與本機測試版本不一致。這是真實 CI 失敗，原始 runner log 保存於 `workflow/first_deployment_failure.log`。
+
+修正方式是讓 renderer 明確使用 LF 輸出，加上 `.gitattributes` 保留 site/ 精確位元組，並在 push 前逐一比對 Git index 中 artifact 與測試 hash。沒有關掉 hash gate。重新執行 pipeline 與獨立 Chromium 測試後才重新推送；最終部署結果見 `workflow/github_status.json`、`tests/remote_results.json` 與 `submission.md`。
+
 ## 最容易出錯的節點：來源識別，而不只是下載
 
 最初選定 TalkNet 的候選 arXiv ID 為 2103.14097。HTTP 成功、PDF 可解析，原先 ingestion 因而標成 success；但閱讀第一頁才發現那其實是 *Impedance eigenvalues in linear elasticity*。這是真實來源錯配，不是故意注入的測試，也不能把「下載成功」當成「資料正確」。初始未核實 manifest 保存於 `workflow/initial_manifest_unverified.json`；錯誤文件已隔離，不進最終知識索引。

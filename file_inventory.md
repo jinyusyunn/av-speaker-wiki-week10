@@ -2,9 +2,10 @@
 
 不含 .git 內部資料與 Python __pycache__。data/raw、data/text、data/chunks.json 與 workflow/rejected_* 為本機查證／隔離資料，依 .gitignore 不上傳。公開 artifact 僅 site/。
 
-共 88 個專案檔案。
+共 91 個專案檔案。
 
 ```text
+.gitattributes
 .github/workflows/pages.yml
 .gitignore
 AGENTS.md
@@ -77,6 +78,7 @@ wiki_plan.md
 workflow/deployment_log.json
 workflow/execution_log.md
 workflow/fact_check.json
+workflow/first_deployment_failure.log
 workflow/github_status.json
 workflow/graph.md
 workflow/initial_manifest_unverified.json
@@ -92,5 +94,6 @@ workflow/runs/20261111T174421Z.json
 workflow/runs/20261111T174431Z.json
 workflow/runs/20261111T174548Z.json
 workflow/runs/20261116T174119Z.json
+workflow/runs/20261116T174353Z.json
 workflow/source_collection.md
 ```

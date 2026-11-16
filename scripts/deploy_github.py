@@ -57,6 +57,10 @@ def main(mode):
   subprocess.run([sys.executable,'scripts/verify_public.py'],cwd=ROOT,check=True)
   if git('remote','get-url','origin').stdout.strip()!=f'https://github.com/{TARGET}.git': raise RuntimeError('Remote mismatch')
   git('add','--all')
+  artifact_hashes=json.loads((ROOT/'tests/artifact_hashes.json').read_text(encoding='utf-8'))
+  for name,expected in artifact_hashes.items():
+   staged_bytes=subprocess.run(['git','show',':site/'+name],cwd=ROOT,capture_output=True,check=True).stdout
+   if hashlib.sha256(staged_bytes).hexdigest()!=expected: raise RuntimeError('Git index changes tested artifact bytes: '+name)
   staged=git('diff','--cached','--name-only').stdout.splitlines()
   forbidden=[p for p in staged if p.startswith(('data/','workflow/rejected_','deliverables/')) or p.endswith('.pdf') or p=='.env']
   if forbidden: raise RuntimeError('Refusing to upload local-only files: '+', '.join(forbidden))
