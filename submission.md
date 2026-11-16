@@ -11,7 +11,7 @@
 - 可搜尋 Wiki：`site/wiki.html`
 - 完整檔案清單：`file_inventory.md`
 - GitHub repository：https://github.com/jinyusyunn/av-speaker-wiki-week10
-- GitHub Pages：使用者已確認上傳，repository 已建立；GitHub Pages 正在部署，尚無已驗證的公開網址。
+- GitHub Pages：已部署並實際驗證：https://jinyusyunn.github.io/av-speaker-wiki-week10/
 
 ## Wiki、資料來源與生成方式
 
@@ -43,7 +43,7 @@ Wiki 查詢 Top-1 測試 **7/7 通過**；例如「人臉追蹤」找到 face-tr
 
 實作流程為 Source Collection → Ingest → Wiki Generation → Wiki Retrieval → Outline → Fact Check → Slide Generation → HTML Validation → Publish Readiness。每節點輸入、輸出、檢查、fallback 與 2 次重試上限見 workflow/graph.md。資料不足回到 ingestion，引用錯誤回到 Wiki generation，網頁錯誤回到 slide generation。
 
-首次完整 run 20261111T174421Z 因 tests/ 目錄未建立而在 HTML Validation 發生 FileNotFoundError，實際回退與重試兩次後停止；修正初始化後完整執行成功。最新成功 run 為 `20261116T174353Z`。每次節點起訖時間、錯誤與 traceback 保留在 workflow/runs/；最新摘要為 workflow/execution_log.md。
+首次完整 run 20261111T174421Z 因 tests/ 目錄未建立而在 HTML Validation 發生 FileNotFoundError，實際回退與重試兩次後停止；修正初始化後完整執行成功。最新成功 run 為 `20261116T174528Z`。每次節點起訖時間、錯誤與 traceback 保留在 workflow/runs/；最新摘要為 workflow/execution_log.md。
 
 另一次真實前期問題是 TalkNet 候選 arXiv ID 指向數學論文。閱讀第一頁發現後已隔離錯誤資料、改用正確 2107.06592，並把標題 gate 移到成功 ingest 之前；最終資料不含錯誤論文。
 
@@ -55,11 +55,11 @@ Chromium 實測桌機 1440×1000、手機 390×844，包含鍵盤、上下頁、
 
 反思指出最易出錯的是「來源身分正確性」，下載可解析的 PDF 仍可能是錯論文；其次是固定回退無法修正驗證環境初始化。已前移標題核對、測試目錄初始化與 artifact hash gate。截圖曾抓到進場動畫的透明起點，調整動畫完成後截圖並增補 opacity 檢查。詳細反思見 reflection.md。
 
-## 未完成事項與誠實限制
+## 公開部署與誠實限制
 
-使用者已確認上傳，repository 已建立；GitHub Pages 正在部署，尚無已驗證的公開網址。
+已部署並實際驗證：https://jinyusyunn.github.io/av-speaker-wiki-week10/
 
-已備妥 GitHub Actions、site/、.nojekyll 與部署操作說明；公開 artifact 不含第三方 PDF。未訓練或執行 AV 辨識模型，未宣稱模型準確率。自動引用定位不等同完整語意事實查核；中文新同義詞的詞彙檢索仍可能不足。
+GitHub Actions 已成功部署，並直接 GET 公開首頁、簡報、Wiki 與三個 CSS／JS 資產，6／6 回應 HTTP 200 且 SHA-256 與本機已驗證 artifact 一致。證據在 tests/remote_results.json；公開 artifact 不含第三方 PDF。未訓練或執行 AV 辨識模型，未宣稱模型準確率。自動引用定位不等同完整語意事實查核；中文新同義詞的詞彙檢索仍可能不足。
 
 ## 對照題目提供的 9～10 分要求
 
@@ -79,7 +79,7 @@ Chromium 實測桌機 1440×1000、手機 390×844，包含鍵盤、上下頁、
 |完整執行、真實節點與錯誤紀錄|完成|runs/ 保留 failed 與 success；execution_log.md|
 |根據實測反思與改進流程|完成|reflection.md：錯來源、初始化錯誤、動畫截圖與前移檢查|
 |自動驗證與可用時瀏覽器測試|完成|106 通過、0 失敗；其中靜態 41、Chromium 65|
-|公開 Wiki 與 GitHub Pages|本機備妥；公開部署待確認|site/＋Actions＋hash gate；未捏造公開 URL|
+|公開 Wiki 與 GitHub Pages|完成|GitHub Actions 成功，公開首頁／簡報／Wiki 及資產共 6 個 URL 的 HTTP 與 SHA-256 均通過|
 |可重現與繳交文件|完成|README、AGENTS、requirements、submission、完整檔案清單|
 
 ## 重現指令
@@ -93,3 +93,14 @@ python scripts/verify_public.py
 ```
 
 Python 需可下載論文，或已有本機快取；Node.js 用於 JS 語法檢查。所有成果、限制與數量均依實際檔案和報告填寫。
+
+## 線上成果與繳交清單
+
+- 首頁：https://jinyusyunn.github.io/av-speaker-wiki-week10/
+- 教學簡報：https://jinyusyunn.github.io/av-speaker-wiki-week10/slides.html
+- 可查詢 Wiki：https://jinyusyunn.github.io/av-speaker-wiki-week10/wiki.html
+- GitHub 程式與文件：https://github.com/jinyusyunn/av-speaker-wiki-week10
+- 真實部署紀錄：https://github.com/jinyusyunn/av-speaker-wiki-week10/actions/runs/43921457845
+- 本機繳交 ZIP：`deliverables/week10_submission.zip`（不含第三方 PDF、完整原文或憑證；可依 README 重新下載來源）
+
+建議在作業平台貼上教學簡報與 GitHub repository 連結，再貼本文件全文；若平台需要附件，上傳 ZIP。完整要求對照、反思與真實測試證據已包含於專案。

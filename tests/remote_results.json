@@ -1,0 +1,39 @@
+{
+  "time": "2026-11-16T17:44:51.320416+00:00",
+  "actions_run_url": "https://github.com/jinyusyunn/av-speaker-wiki-week10/actions/runs/43921457845",
+  "actions_commit": "b6e2bdc5d8f1bfe535c530e070f293ba129e74bf",
+  "pages_url": "https://jinyusyunn.github.io/av-speaker-wiki-week10/",
+  "verified": true,
+  "checks": [
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "sha256_matches_local": true
+    },
+    {
+      "path": "slides.html",
+      "http_status": 200,
+      "sha256_matches_local": true
+    },
+    {
+      "path": "wiki.html",
+      "http_status": 200,
+      "sha256_matches_local": true
+    },
+    {
+      "path": "assets/style.css",
+      "http_status": 200,
+      "sha256_matches_local": true
+    },
+    {
+      "path": "assets/deck.js",
+      "http_status": 200,
+      "sha256_matches_local": true
+    },
+    {
+      "path": "assets/wiki.js",
+      "http_status": 200,
+      "sha256_matches_local": true
+    }
+  ]
+}

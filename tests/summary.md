@@ -1,6 +1,6 @@
 # 實際驗證結果
 
-最新完整 run：`20261116T174353Z`，狀態 `success`。
+最新完整 run：`20261116T174528Z`，狀態 `success`。
 
 |類型|通過|失敗|證據|
 |---|---:|---:|---|
@@ -17,3 +17,7 @@ Wiki 中英查詢 Top-1 測試 7/7 通過，另有 unknown query 無結果測試
 已實際檢視 screenshots/ 中桌機 pipeline 與手機 tracking 截圖。首次截圖抓到動畫剛開始而幾乎透明，之後使用 animations=disabled 並增補 opacity 檢查，重新截圖。截圖本身不是模型辨識結果。
 
 部署 gate：`python scripts/verify_public.py` 確認已通過報告及 site/ 的精確 SHA-256。不以測試報告存在就推論任意後續版本也測過。
+
+## 真實公開部署驗證
+
+GitHub Actions 成功後，再 GET 6 個公開 URL（首頁、簡報、Wiki、CSS、兩個 JS），全部 HTTP 200 且 SHA-256 與本機 artifact 相符。這是另外 6 項遠端檢查，不混入上述 106 項本機測試。證據：remote_results.json。第一次 CI 的換行 hash 不符失敗亦保留於 workflow/first_deployment_failure.log，已修正而非略過。

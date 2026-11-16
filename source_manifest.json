@@ -10,7 +10,7 @@
     "attempts": [
       {
         "attempt": 1,
-        "time": "2026-11-16T17:43:53.069229+00:00",
+        "time": "2026-11-16T17:45:28.814564+00:00",
         "status": "success",
         "cache_used": true
       }
@@ -23,7 +23,7 @@
     "sha256": "070d1222ff4489a32414a929b03ebc95843ada2e172714e92189789fb4104d05",
     "raw_path": "data/raw/S01.pdf",
     "text_path": "data/text/S01.json",
-    "retrieved_at": "2026-11-16T17:43:53.069229+00:00",
+    "retrieved_at": "2026-11-16T17:45:28.814564+00:00",
     "cache_used": true,
     "pdf_metadata": {
       "/Author": "author",
@@ -49,7 +49,7 @@
     "attempts": [
       {
         "attempt": 1,
-        "time": "2026-11-16T17:43:53.069386+00:00",
+        "time": "2026-11-16T17:45:28.814755+00:00",
         "status": "success",
         "cache_used": true
       }
@@ -62,7 +62,7 @@
     "sha256": "249f260cfc806a5b64210012a17306167132072c7d486d9b814338593c8c5ea8",
     "raw_path": "data/raw/S02.pdf",
     "text_path": "data/text/S02.json",
-    "retrieved_at": "2026-11-16T17:43:53.069386+00:00",
+    "retrieved_at": "2026-11-16T17:45:28.814755+00:00",
     "cache_used": true,
     "pdf_metadata": {
       "/Author": "",
@@ -88,7 +88,7 @@
     "attempts": [
       {
         "attempt": 1,
-        "time": "2026-11-16T17:43:53.069436+00:00",
+        "time": "2026-11-16T17:45:28.814834+00:00",
         "status": "success",
         "cache_used": true
       }
@@ -101,7 +101,7 @@
     "sha256": "361b90273f39bb4b02c9ce9ea3accbfbbc21ee68f783b1a76e28ce76cd5127a2",
     "raw_path": "data/raw/S03.pdf",
     "text_path": "data/text/S03.json",
-    "retrieved_at": "2026-11-16T17:43:53.069436+00:00",
+    "retrieved_at": "2026-11-16T17:45:28.814834+00:00",
     "cache_used": true,
     "pdf_metadata": {
       "/Author": "",
@@ -127,7 +127,7 @@
     "attempts": [
       {
         "attempt": 1,
-        "time": "2026-11-16T17:43:53.069674+00:00",
+        "time": "2026-11-16T17:45:28.815028+00:00",
         "status": "success",
         "cache_used": true
       }
@@ -140,7 +140,7 @@
     "sha256": "9794340eb8cd9ebf6528ccac233cbc15440cd303dd7bc5582f277670c133c02c",
     "raw_path": "data/raw/S04.pdf",
     "text_path": "data/text/S04.json",
-    "retrieved_at": "2026-11-16T17:43:53.069674+00:00",
+    "retrieved_at": "2026-11-16T17:45:28.815028+00:00",
     "cache_used": true,
     "pdf_metadata": {
       "/CreationDate": "D:20210727020750Z",
@@ -164,7 +164,7 @@
     "attempts": [
       {
         "attempt": 1,
-        "time": "2026-11-16T17:43:53.604596+00:00",
+        "time": "2026-11-16T17:45:29.409236+00:00",
         "status": "success",
         "cache_used": true
       }
@@ -177,7 +177,7 @@
     "sha256": "2c6b0845f8eeabac5a5b1279949e302a181d7d6c8078a10cc4560fba06717d3b",
     "raw_path": "data/raw/S05.pdf",
     "text_path": "data/text/S05.json",
-    "retrieved_at": "2026-11-16T17:43:53.604596+00:00",
+    "retrieved_at": "2026-11-16T17:45:29.409236+00:00",
     "cache_used": true,
     "pdf_metadata": {
       "/Producer": "dvips + GPL Ghostscript GIT PRERELEASE 9.08",
@@ -201,7 +201,7 @@
     "attempts": [
       {
         "attempt": 1,
-        "time": "2026-11-16T17:43:54.013936+00:00",
+        "time": "2026-11-16T17:45:29.766923+00:00",
         "status": "success",
         "cache_used": true
       }
@@ -214,7 +214,7 @@
     "sha256": "67ba5d7d68392a5b9a198ff42fdcb2655f9ea9a662b68aba6dc52d6de06802c4",
     "raw_path": "data/raw/S06.pdf",
     "text_path": "data/text/S06.json",
-    "retrieved_at": "2026-11-16T17:43:54.013936+00:00",
+    "retrieved_at": "2026-11-16T17:45:29.766923+00:00",
     "cache_used": true,
     "pdf_metadata": {
       "/CreationDate": "D:20170323003211Z",
@@ -236,7 +236,7 @@
     "attempts": [
       {
         "attempt": 1,
-        "time": "2026-11-16T17:43:54.228835+00:00",
+        "time": "2026-11-16T17:45:29.915754+00:00",
         "status": "success",
         "cache_used": true
       }
@@ -249,7 +249,7 @@
     "sha256": "ae5c39755da12a0bf593e148d76802250bd23d20b3fe86113cddb8a55f012026",
     "raw_path": "data/raw/S07.pdf",
     "text_path": "data/text/S07.json",
-    "retrieved_at": "2026-11-16T17:43:54.228835+00:00",
+    "retrieved_at": "2026-11-16T17:45:29.915754+00:00",
     "cache_used": true,
     "pdf_metadata": {
       "/CreationDate": "D:20220719003525Z",

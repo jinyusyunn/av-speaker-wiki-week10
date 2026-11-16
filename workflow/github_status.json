@@ -2,20 +2,28 @@
   "repository_initialized": true,
   "gh_available": false,
   "target_confirmed": true,
-  "deployed": false,
+  "deployed": true,
   "http_status": 200,
   "authenticated": true,
   "login": "jinyusyunn",
   "profile_url": "https://github.com/jinyusyunn",
   "target": "jinyusyunn/av-speaker-wiki-week10",
   "authorization": "使用者於本次要求上傳 GitHub；沿用先前明確提出的公開 repository 目標。",
-  "checked_at": "2026-11-16T17:43:05.916727+00:00",
+  "checked_at": "2026-11-16T17:44:48.465575+00:00",
   "repository_url": "https://github.com/jinyusyunn/av-speaker-wiki-week10",
   "repository_created": true,
-  "last_pushed_commit": "9cf5c730aee274582a545d5f90341cc76127a6cf",
+  "last_pushed_commit": "b6e2bdc5d8f1bfe535c530e070f293ba129e74bf",
   "pages_configured": true,
   "pages_candidate_url": "https://jinyusyunn.github.io/av-speaker-wiki-week10/",
   "action_runs": [
+    {
+      "id": 43921457845,
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/jinyusyunn/av-speaker-wiki-week10/actions/runs/43921457845",
+      "head_sha": "b6e2bdc5d8f1bfe535c530e070f293ba129e74bf",
+      "created_at": "2026-11-16T17:44:05Z"
+    },
     {
       "id": 43921209171,
       "status": "completed",
@@ -32,5 +40,11 @@
       "head_sha": "9cf5c730aee274582a545d5f90341cc76127a6cf",
       "created_at": "2026-11-16T17:42:34Z"
     }
-  ]
+  ],
+  "pages_url": "https://jinyusyunn.github.io/av-speaker-wiki-week10/",
+  "slides_url": "https://jinyusyunn.github.io/av-speaker-wiki-week10/slides.html",
+  "wiki_url": "https://jinyusyunn.github.io/av-speaker-wiki-week10/wiki.html",
+  "deployment_run_url": "https://github.com/jinyusyunn/av-speaker-wiki-week10/actions/runs/43921457845",
+  "deployed_commit": "b6e2bdc5d8f1bfe535c530e070f293ba129e74bf",
+  "verified_at": "2026-11-16T17:44:51.320889+00:00"
 }

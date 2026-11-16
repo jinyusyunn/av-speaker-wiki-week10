@@ -1,11 +1,11 @@
 {
   "local_ready": true,
-  "public_deployed": false,
+  "public_deployed": true,
   "github_authenticated": true,
   "target_confirmed": true,
   "reason": "本機 site/ 已通過驗證；公開部署狀態依 GitHub API 與實際 HTTP 驗證記錄。",
   "public_artifact": "site/ only",
   "next_command": "python scripts/deploy_github.py status",
   "repository_url": "https://github.com/jinyusyunn/av-speaker-wiki-week10",
-  "pages_url": null
+  "pages_url": "https://jinyusyunn.github.io/av-speaker-wiki-week10/"
 }
