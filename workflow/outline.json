@@ -1,0 +1,208 @@
+[
+  {
+    "title": "AI 如何辨識影片中誰正在說話？",
+    "kicker": "AUDIO × VISION / 第十週教學專案",
+    "query": "audio visual 基本原理",
+    "entries": [
+      "av-fusion"
+    ],
+    "visual": "hero",
+    "note": "學習目標：分清楚聲音分段、可見人物說話判斷，以及聲音與人物配對。",
+    "selected_entries": [
+      "av-fusion"
+    ],
+    "query_result_sha256": "a38f0c120f96d45ae39a572e8345fc8450247b550654d0ebd00a6ec73034df79"
+  },
+  {
+    "title": "先回答：誰，在何時？",
+    "kicker": "01 / SPEAKER DIARIZATION",
+    "query": "speaker diarization 說話者分段",
+    "entries": [
+      "diarization"
+    ],
+    "visual": "timeline",
+    "note": "示意：0–2 秒 A 說話、2–4 秒 B 說話、4–6 秒 A 再說話。這不是模型實測。",
+    "selected_entries": [
+      "diarization"
+    ],
+    "query_result_sha256": "896b98789ab343169c20daad3b6af865140e867bd90a7d06feef7eccefa42ae1"
+  },
+  {
+    "title": "只有聲音，少了哪一塊拼圖？",
+    "kicker": "02 / WHY VISION",
+    "query": "active speaker detection 嘴巴",
+    "entries": [
+      "active-speaker"
+    ],
+    "visual": "compare",
+    "note": "聽見語音活動，不代表知道畫面中哪張臉在發聲；張嘴也不保證正在說話。",
+    "selected_entries": [
+      "active-speaker"
+    ],
+    "query_result_sha256": "de23f17f4089bb645c22faa60bedffb1e0df0e180e27855da2d6c164ef773855"
+  },
+  {
+    "title": "視聽融合：互相補充的線索",
+    "kicker": "03 / AUDIO-VISUAL PRINCIPLE",
+    "query": "audio visual 視聽融合",
+    "entries": [
+      "av-fusion"
+    ],
+    "visual": "fusion",
+    "note": "教學抽象：先對齊時間，再比較音訊與嘴部動作；具體模型可以採不同融合方式。",
+    "selected_entries": [
+      "av-fusion"
+    ],
+    "query_result_sha256": "0404c53b95ce389885fac9aad396e610ebf47a948bd12bc1e18f0866ba127285"
+  },
+  {
+    "title": "先找到臉，再串成軌跡",
+    "kicker": "04 / DETECTION → TRACKING",
+    "query": "face tracking SORT 人臉偵測",
+    "entries": [
+      "face-tracking"
+    ],
+    "visual": "tracks",
+    "note": "同一個 track ID 是跨幀關聯的結果；鏡頭切換或遮擋可能需要重新關聯。",
+    "selected_entries": [
+      "face-tracking"
+    ],
+    "query_result_sha256": "63b2accfd21d5eeb12aa698891c8f6574ba3f3bd714ee9467af29c514babec96"
+  },
+  {
+    "title": "誰正在說話？ASD 的判斷單位",
+    "kicker": "05 / ACTIVE SPEAKER DETECTION",
+    "query": "active speaker detection ASD",
+    "entries": [
+      "active-speaker"
+    ],
+    "visual": "faces",
+    "note": "給每個可見 face track 一個隨時間變化的說話分數，而非只選畫面最大的臉。",
+    "selected_entries": [
+      "active-speaker"
+    ],
+    "query_result_sha256": "d36c73993f15472386b557663540cd5f8b8ff9ea4e56e12cf2e138442dcfa335"
+  },
+  {
+    "title": "TalkNet：把時間也看進去",
+    "kicker": "06 / TEMPORAL CONTEXT",
+    "query": "TalkNet temporal 時間脈絡",
+    "entries": [
+      "talknet"
+    ],
+    "visual": "temporal",
+    "note": "圖解是概念化教學示意，不是完整網路實作，也沒有重現論文成績。",
+    "selected_entries": [
+      "talknet"
+    ],
+    "query_result_sha256": "2de6e3a87f49246ed676e3af7f47a1d1dfa647e719b34b90cea4f0c4b3d1d9ec"
+  },
+  {
+    "title": "把 Speaker A 連到 Person 01",
+    "kicker": "07 / SPEAKER-TO-PERSON ASSOCIATION",
+    "query": "speaker association 聲音人物配對",
+    "entries": [
+      "association"
+    ],
+    "visual": "association",
+    "note": "建議資料格式：起訖時間、speaker ID、person track ID 或 unknown、信心資訊。分數需經驗證與校準。",
+    "selected_entries": [
+      "association"
+    ],
+    "query_result_sha256": "f850747b5ca21bc09a1173b55d0d9660a6d235b9982db16d3014c83af2713d6f"
+  },
+  {
+    "title": "完整 AV Pipeline：兩條支線，一份時間軸",
+    "kicker": "08 / THE BIG PICTURE",
+    "query": "AV pipeline audio visual face tracking speaker association",
+    "entries": [
+      "av-fusion",
+      "diarization",
+      "face-tracking",
+      "association"
+    ],
+    "visual": "pipeline",
+    "note": "本圖是根據 Wiki 整理的模組化教學方案；不是宣稱每篇研究都採用這一條固定流程。",
+    "selected_entries": [
+      "av-fusion",
+      "diarization",
+      "face-tracking",
+      "association"
+    ],
+    "query_result_sha256": "b2846ab7abdb08d8c8487900f0120da56677569b6b28dce6dbe3ac42b7b91d6a"
+  },
+  {
+    "title": "從會議記錄到紀錄片旁白",
+    "kicker": "09 / CASES & APPLICATIONS",
+    "query": "applications meeting AMI 案例",
+    "entries": [
+      "applications"
+    ],
+    "visual": "cases",
+    "note": "實際研究案例：Who said that? 的會議場景、AVA-AVD 的野外影片；本頁不包含自行執行的模型結果。",
+    "selected_entries": [
+      "applications"
+    ],
+    "query_result_sha256": "923a364307737274e37fdb45448b06b2dc9e3573cbfa82d4ca7dbc1bab17aea6"
+  },
+  {
+    "title": "看不到、聽不清、不同步，怎麼辦？",
+    "kicker": "10 / LIMITATIONS",
+    "query": "limitations challenge off screen 限制",
+    "entries": [
+      "limitations"
+    ],
+    "visual": "limits",
+    "note": "工程建議：同步檢查、保留 unknown、人工複核；不能保證畫面一定補救音訊錯誤。",
+    "selected_entries": [
+      "limitations"
+    ],
+    "query_result_sha256": "3106a232e023ac9fff23e682323babb3bc11a2b461c83fd6d2b42958d16fd9a5"
+  },
+  {
+    "title": "評估時，先說清楚量測對象",
+    "kicker": "11 / EVALUATION",
+    "query": "evaluation DER 評估",
+    "entries": [
+      "evaluation"
+    ],
+    "visual": "metrics",
+    "note": "DER 是 diarization 指標；ASD、追蹤及人物關聯需另作相應評估。這裡沒有可比較的模型實測分數。",
+    "selected_entries": [
+      "evaluation"
+    ],
+    "query_result_sha256": "94d87bea0370d01130e4153d1a99c07e748e544d060aa1e80ccd4a8f30c24fdf"
+  },
+  {
+    "title": "小練習：旁白出現時，要配哪張臉？",
+    "kicker": "12 / CHECK YOUR UNDERSTANDING",
+    "query": "speaker association off screen",
+    "entries": [
+      "association"
+    ],
+    "visual": "quiz",
+    "note": "情境示意：鏡頭拍著沉默的受訪者，聲音卻是畫外旁白。點擊選項後查看解釋。",
+    "selected_entries": [
+      "association"
+    ],
+    "query_result_sha256": "21841f57e9d8c65fcd47bb5478626f9c2e269317bfb062d6b36b1ef4684be203"
+  },
+  {
+    "title": "三個問題，帶走完整概念",
+    "kicker": "13 / TAKEAWAYS & REFERENCES",
+    "query": "speaker diarization active speaker detection speaker association",
+    "entries": [
+      "diarization",
+      "active-speaker",
+      "association"
+    ],
+    "visual": "summary",
+    "note": "Diarization：誰何時說話？ASD：哪個可見人物此刻在說話？Association：這段聲音對應誰？參考資料可連回 Wiki 與原文。",
+    "selected_entries": [
+      "diarization",
+      "active-speaker",
+      "association"
+    ],
+    "query_result_sha256": "145aacb2827849c566181f7df3ec700041036c8df899060191a1b059bc390675"
+  }
+]

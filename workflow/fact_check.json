@@ -1,0 +1,6 @@
+{
+  "errors": [],
+  "claims_checked": 19,
+  "semantic_review": "本次 LLM 閱讀相關段落並審閱繁中轉述；不冒稱自動定位能證明語意蘊含。",
+  "method": "source ID + chunk + page + verbatim locator + URL consistency"
+}

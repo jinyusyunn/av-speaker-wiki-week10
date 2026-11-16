@@ -1,0 +1,823 @@
+[
+  {
+    "query": "audio visual 基本原理",
+    "results": [
+      {
+        "entry_id": "av-fusion",
+        "score": 15.1686,
+        "title": "視聽融合：讓聲音遇見畫面",
+        "claim_ids": [
+          "C03",
+          "C04"
+        ],
+        "citations": [
+          "S07-p001-c00000",
+          "S02-p001-c00000"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "speaker diarization 說話者分段",
+    "results": [
+      {
+        "entry_id": "diarization",
+        "score": 18.0976,
+        "title": "說話者分段：誰在何時說話？",
+        "claim_ids": [
+          "C01",
+          "C02"
+        ],
+        "citations": [
+          "S01-p001-c02160",
+          "S01-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "active-speaker",
+        "score": 9.1113,
+        "title": "Active Speaker Detection：可見的誰正在說話？",
+        "claim_ids": [
+          "C08",
+          "C09"
+        ],
+        "citations": [
+          "S03-p001-c00000",
+          "S03-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "association",
+        "score": 6.7867,
+        "title": "Speaker-to-Person Association：聲音與人物配對",
+        "claim_ids": [
+          "C12",
+          "C13"
+        ],
+        "citations": [
+          "S02-p001-c03240",
+          "S07-p001-c01080"
+        ]
+      },
+      {
+        "entry_id": "evaluation",
+        "score": 5.3253,
+        "title": "評估：分清楚在量測什麼",
+        "claim_ids": [
+          "C18",
+          "C19"
+        ],
+        "citations": [
+          "S01-p003-c00000",
+          "S03-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "av-fusion",
+        "score": 4.9965,
+        "title": "視聽融合：讓聲音遇見畫面",
+        "claim_ids": [
+          "C03",
+          "C04"
+        ],
+        "citations": [
+          "S07-p001-c00000",
+          "S02-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "limitations",
+        "score": 3.5639,
+        "title": "限制：遮擋、噪音與畫外音",
+        "claim_ids": [
+          "C16",
+          "C17"
+        ],
+        "citations": [
+          "S07-p001-c00000",
+          "S07-p001-c01080"
+        ]
+      },
+      {
+        "entry_id": "talknet",
+        "score": 1.373,
+        "title": "TalkNet：利用時間脈絡",
+        "claim_ids": [
+          "C10",
+          "C11"
+        ],
+        "citations": [
+          "S04-p001-c00000",
+          "S04-p001-c00000"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "active speaker detection 嘴巴",
+    "results": [
+      {
+        "entry_id": "active-speaker",
+        "score": 12.5003,
+        "title": "Active Speaker Detection：可見的誰正在說話？",
+        "claim_ids": [
+          "C08",
+          "C09"
+        ],
+        "citations": [
+          "S03-p001-c00000",
+          "S03-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "face-tracking",
+        "score": 3.4991,
+        "title": "Face Detection 與 Tracking：框與軌跡",
+        "claim_ids": [
+          "C05",
+          "C06",
+          "C07"
+        ],
+        "citations": [
+          "S02-p003-c01080",
+          "S05-p001-c00000",
+          "S06-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "association",
+        "score": 2.9895,
+        "title": "Speaker-to-Person Association：聲音與人物配對",
+        "claim_ids": [
+          "C12",
+          "C13"
+        ],
+        "citations": [
+          "S02-p001-c03240",
+          "S07-p001-c01080"
+        ]
+      },
+      {
+        "entry_id": "diarization",
+        "score": 2.9895,
+        "title": "說話者分段：誰在何時說話？",
+        "claim_ids": [
+          "C01",
+          "C02"
+        ],
+        "citations": [
+          "S01-p001-c02160",
+          "S01-p001-c03240"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "audio visual 視聽融合",
+    "results": [
+      {
+        "entry_id": "av-fusion",
+        "score": 17.6082,
+        "title": "視聽融合：讓聲音遇見畫面",
+        "claim_ids": [
+          "C03",
+          "C04"
+        ],
+        "citations": [
+          "S07-p001-c00000",
+          "S02-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "talknet",
+        "score": 2.6291,
+        "title": "TalkNet：利用時間脈絡",
+        "claim_ids": [
+          "C10",
+          "C11"
+        ],
+        "citations": [
+          "S04-p001-c00000",
+          "S04-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "limitations",
+        "score": 2.1211,
+        "title": "限制：遮擋、噪音與畫外音",
+        "claim_ids": [
+          "C16",
+          "C17"
+        ],
+        "citations": [
+          "S07-p001-c00000",
+          "S07-p001-c01080"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "face tracking SORT 人臉偵測",
+    "results": [
+      {
+        "entry_id": "face-tracking",
+        "score": 22.5942,
+        "title": "Face Detection 與 Tracking：框與軌跡",
+        "claim_ids": [
+          "C05",
+          "C06",
+          "C07"
+        ],
+        "citations": [
+          "S02-p003-c01080",
+          "S05-p001-c00000",
+          "S06-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "active-speaker",
+        "score": 6.9094,
+        "title": "Active Speaker Detection：可見的誰正在說話？",
+        "claim_ids": [
+          "C08",
+          "C09"
+        ],
+        "citations": [
+          "S03-p001-c00000",
+          "S03-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "association",
+        "score": 2.3056,
+        "title": "Speaker-to-Person Association：聲音與人物配對",
+        "claim_ids": [
+          "C12",
+          "C13"
+        ],
+        "citations": [
+          "S02-p001-c03240",
+          "S07-p001-c01080"
+        ]
+      },
+      {
+        "entry_id": "diarization",
+        "score": 2.1211,
+        "title": "說話者分段：誰在何時說話？",
+        "claim_ids": [
+          "C01",
+          "C02"
+        ],
+        "citations": [
+          "S01-p001-c02160",
+          "S01-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "evaluation",
+        "score": 1.8601,
+        "title": "評估：分清楚在量測什麼",
+        "claim_ids": [
+          "C18",
+          "C19"
+        ],
+        "citations": [
+          "S01-p003-c00000",
+          "S03-p001-c00000"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "active speaker detection ASD",
+    "results": [
+      {
+        "entry_id": "active-speaker",
+        "score": 12.9657,
+        "title": "Active Speaker Detection：可見的誰正在說話？",
+        "claim_ids": [
+          "C08",
+          "C09"
+        ],
+        "citations": [
+          "S03-p001-c00000",
+          "S03-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "face-tracking",
+        "score": 3.4991,
+        "title": "Face Detection 與 Tracking：框與軌跡",
+        "claim_ids": [
+          "C05",
+          "C06",
+          "C07"
+        ],
+        "citations": [
+          "S02-p003-c01080",
+          "S05-p001-c00000",
+          "S06-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "association",
+        "score": 2.9895,
+        "title": "Speaker-to-Person Association：聲音與人物配對",
+        "claim_ids": [
+          "C12",
+          "C13"
+        ],
+        "citations": [
+          "S02-p001-c03240",
+          "S07-p001-c01080"
+        ]
+      },
+      {
+        "entry_id": "diarization",
+        "score": 2.9895,
+        "title": "說話者分段：誰在何時說話？",
+        "claim_ids": [
+          "C01",
+          "C02"
+        ],
+        "citations": [
+          "S01-p001-c02160",
+          "S01-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "evaluation",
+        "score": 2.4827,
+        "title": "評估：分清楚在量測什麼",
+        "claim_ids": [
+          "C18",
+          "C19"
+        ],
+        "citations": [
+          "S01-p003-c00000",
+          "S03-p001-c00000"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "TalkNet temporal 時間脈絡",
+    "results": [
+      {
+        "entry_id": "talknet",
+        "score": 18.5777,
+        "title": "TalkNet：利用時間脈絡",
+        "claim_ids": [
+          "C10",
+          "C11"
+        ],
+        "citations": [
+          "S04-p001-c00000",
+          "S04-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "active-speaker",
+        "score": 1.8601,
+        "title": "Active Speaker Detection：可見的誰正在說話？",
+        "claim_ids": [
+          "C08",
+          "C09"
+        ],
+        "citations": [
+          "S03-p001-c00000",
+          "S03-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "diarization",
+        "score": 1.8601,
+        "title": "說話者分段：誰在何時說話？",
+        "claim_ids": [
+          "C01",
+          "C02"
+        ],
+        "citations": [
+          "S01-p001-c02160",
+          "S01-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "limitations",
+        "score": 1.8601,
+        "title": "限制：遮擋、噪音與畫外音",
+        "claim_ids": [
+          "C16",
+          "C17"
+        ],
+        "citations": [
+          "S07-p001-c00000",
+          "S07-p001-c01080"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "speaker association 聲音人物配對",
+    "results": [
+      {
+        "entry_id": "association",
+        "score": 22.6015,
+        "title": "Speaker-to-Person Association：聲音與人物配對",
+        "claim_ids": [
+          "C12",
+          "C13"
+        ],
+        "citations": [
+          "S02-p001-c03240",
+          "S07-p001-c01080"
+        ]
+      },
+      {
+        "entry_id": "active-speaker",
+        "score": 5.9504,
+        "title": "Active Speaker Detection：可見的誰正在說話？",
+        "claim_ids": [
+          "C08",
+          "C09"
+        ],
+        "citations": [
+          "S03-p001-c00000",
+          "S03-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "diarization",
+        "score": 5.0478,
+        "title": "說話者分段：誰在何時說話？",
+        "claim_ids": [
+          "C01",
+          "C02"
+        ],
+        "citations": [
+          "S01-p001-c02160",
+          "S01-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "av-fusion",
+        "score": 4.2201,
+        "title": "視聽融合：讓聲音遇見畫面",
+        "claim_ids": [
+          "C03",
+          "C04"
+        ],
+        "citations": [
+          "S07-p001-c00000",
+          "S02-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "applications",
+        "score": 3.3214,
+        "title": "案例與應用：會議與野外影片",
+        "claim_ids": [
+          "C14",
+          "C15"
+        ],
+        "citations": [
+          "S02-p001-c00000",
+          "S07-p001-c02160"
+        ]
+      },
+      {
+        "entry_id": "evaluation",
+        "score": 1.6607,
+        "title": "評估：分清楚在量測什麼",
+        "claim_ids": [
+          "C18",
+          "C19"
+        ],
+        "citations": [
+          "S01-p003-c00000",
+          "S03-p001-c00000"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "AV pipeline audio visual face tracking speaker association",
+    "results": [
+      {
+        "entry_id": "av-fusion",
+        "score": 12.1784,
+        "title": "視聽融合：讓聲音遇見畫面",
+        "claim_ids": [
+          "C03",
+          "C04"
+        ],
+        "citations": [
+          "S07-p001-c00000",
+          "S02-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "face-tracking",
+        "score": 8.102,
+        "title": "Face Detection 與 Tracking：框與軌跡",
+        "claim_ids": [
+          "C05",
+          "C06",
+          "C07"
+        ],
+        "citations": [
+          "S02-p003-c01080",
+          "S05-p001-c00000",
+          "S06-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "association",
+        "score": 6.7497,
+        "title": "Speaker-to-Person Association：聲音與人物配對",
+        "claim_ids": [
+          "C12",
+          "C13"
+        ],
+        "citations": [
+          "S02-p001-c03240",
+          "S07-p001-c01080"
+        ]
+      },
+      {
+        "entry_id": "active-speaker",
+        "score": 5.1118,
+        "title": "Active Speaker Detection：可見的誰正在說話？",
+        "claim_ids": [
+          "C08",
+          "C09"
+        ],
+        "citations": [
+          "S03-p001-c00000",
+          "S03-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "diarization",
+        "score": 2.9895,
+        "title": "說話者分段：誰在何時說話？",
+        "claim_ids": [
+          "C01",
+          "C02"
+        ],
+        "citations": [
+          "S01-p001-c02160",
+          "S01-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "applications",
+        "score": 2.4827,
+        "title": "案例與應用：會議與野外影片",
+        "claim_ids": [
+          "C14",
+          "C15"
+        ],
+        "citations": [
+          "S02-p001-c00000",
+          "S07-p001-c02160"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "applications meeting AMI 案例",
+    "results": [
+      {
+        "entry_id": "applications",
+        "score": 14.8298,
+        "title": "案例與應用：會議與野外影片",
+        "claim_ids": [
+          "C14",
+          "C15"
+        ],
+        "citations": [
+          "S02-p001-c00000",
+          "S07-p001-c02160"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "limitations challenge off screen 限制",
+    "results": [
+      {
+        "entry_id": "limitations",
+        "score": 14.7931,
+        "title": "限制：遮擋、噪音與畫外音",
+        "claim_ids": [
+          "C16",
+          "C17"
+        ],
+        "citations": [
+          "S07-p001-c00000",
+          "S07-p001-c01080"
+        ]
+      },
+      {
+        "entry_id": "association",
+        "score": 4.9654,
+        "title": "Speaker-to-Person Association：聲音與人物配對",
+        "claim_ids": [
+          "C12",
+          "C13"
+        ],
+        "citations": [
+          "S02-p001-c03240",
+          "S07-p001-c01080"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "evaluation DER 評估",
+    "results": [
+      {
+        "entry_id": "evaluation",
+        "score": 9.423,
+        "title": "評估：分清楚在量測什麼",
+        "claim_ids": [
+          "C18",
+          "C19"
+        ],
+        "citations": [
+          "S01-p003-c00000",
+          "S03-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "applications",
+        "score": 2.1211,
+        "title": "案例與應用：會議與野外影片",
+        "claim_ids": [
+          "C14",
+          "C15"
+        ],
+        "citations": [
+          "S02-p001-c00000",
+          "S07-p001-c02160"
+        ]
+      },
+      {
+        "entry_id": "limitations",
+        "score": 2.1211,
+        "title": "限制：遮擋、噪音與畫外音",
+        "claim_ids": [
+          "C16",
+          "C17"
+        ],
+        "citations": [
+          "S07-p001-c00000",
+          "S07-p001-c01080"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "speaker association off screen",
+    "results": [
+      {
+        "entry_id": "association",
+        "score": 11.7151,
+        "title": "Speaker-to-Person Association：聲音與人物配對",
+        "claim_ids": [
+          "C12",
+          "C13"
+        ],
+        "citations": [
+          "S02-p001-c03240",
+          "S07-p001-c01080"
+        ]
+      },
+      {
+        "entry_id": "limitations",
+        "score": 4.9654,
+        "title": "限制：遮擋、噪音與畫外音",
+        "claim_ids": [
+          "C16",
+          "C17"
+        ],
+        "citations": [
+          "S07-p001-c00000",
+          "S07-p001-c01080"
+        ]
+      },
+      {
+        "entry_id": "diarization",
+        "score": 2.9895,
+        "title": "說話者分段：誰在何時說話？",
+        "claim_ids": [
+          "C01",
+          "C02"
+        ],
+        "citations": [
+          "S01-p001-c02160",
+          "S01-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "active-speaker",
+        "score": 2.6291,
+        "title": "Active Speaker Detection：可見的誰正在說話？",
+        "claim_ids": [
+          "C08",
+          "C09"
+        ],
+        "citations": [
+          "S03-p001-c00000",
+          "S03-p001-c03240"
+        ]
+      }
+    ]
+  },
+  {
+    "query": "speaker diarization active speaker detection speaker association",
+    "results": [
+      {
+        "entry_id": "active-speaker",
+        "score": 9.4665,
+        "title": "Active Speaker Detection：可見的誰正在說話？",
+        "claim_ids": [
+          "C08",
+          "C09"
+        ],
+        "citations": [
+          "S03-p001-c00000",
+          "S03-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "association",
+        "score": 6.7497,
+        "title": "Speaker-to-Person Association：聲音與人物配對",
+        "claim_ids": [
+          "C12",
+          "C13"
+        ],
+        "citations": [
+          "S02-p001-c03240",
+          "S07-p001-c01080"
+        ]
+      },
+      {
+        "entry_id": "diarization",
+        "score": 5.6185,
+        "title": "說話者分段：誰在何時說話？",
+        "claim_ids": [
+          "C01",
+          "C02"
+        ],
+        "citations": [
+          "S01-p001-c02160",
+          "S01-p001-c03240"
+        ]
+      },
+      {
+        "entry_id": "face-tracking",
+        "score": 3.4991,
+        "title": "Face Detection 與 Tracking：框與軌跡",
+        "claim_ids": [
+          "C05",
+          "C06",
+          "C07"
+        ],
+        "citations": [
+          "S02-p003-c01080",
+          "S05-p001-c00000",
+          "S06-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "av-fusion",
+        "score": 2.1211,
+        "title": "視聽融合：讓聲音遇見畫面",
+        "claim_ids": [
+          "C03",
+          "C04"
+        ],
+        "citations": [
+          "S07-p001-c00000",
+          "S02-p001-c00000"
+        ]
+      },
+      {
+        "entry_id": "evaluation",
+        "score": 2.1211,
+        "title": "評估：分清楚在量測什麼",
+        "claim_ids": [
+          "C18",
+          "C19"
+        ],
+        "citations": [
+          "S01-p003-c00000",
+          "S03-p001-c00000"
+        ]
+      }
+    ]
+  }
+]

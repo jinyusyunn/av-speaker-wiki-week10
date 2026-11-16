@@ -1,0 +1,11 @@
+{
+  "local_ready": true,
+  "public_deployed": false,
+  "github_authenticated": true,
+  "target_confirmed": false,
+  "reason": "GitHub Pages 遠端目標須經使用者確認；本機 site/ 已通過驗證。",
+  "public_artifact": "site/ only",
+  "next_command": "python scripts/deploy_github.py status",
+  "repository_url": null,
+  "pages_url": null
+}

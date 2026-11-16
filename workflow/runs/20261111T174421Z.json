@@ -1,0 +1,149 @@
+{
+  "run_id": "20261111T174421Z",
+  "status": "failed",
+  "events": [
+    {
+      "run": "20261111T174421Z",
+      "node": "Source Collection",
+      "started": "2026-11-11T17:44:21.780582+00:00",
+      "ended": "2026-11-11T17:44:21.780732+00:00",
+      "status": "success",
+      "result": {
+        "configured_primary_sources": 7,
+        "input": "wiki_plan.md + scripts/ingest.py SOURCES",
+        "output": "validated source configuration; official PDF URL is checked at Ingest"
+      }
+    },
+    {
+      "run": "20261111T174421Z",
+      "node": "Ingest",
+      "started": "2026-11-11T17:44:21.780758+00:00",
+      "ended": "2026-11-11T17:44:23.951765+00:00",
+      "status": "success",
+      "result": {
+        "sources_success": 7,
+        "chunks": 421,
+        "input": "verified source configuration + cached PDF or network",
+        "output": "source_manifest.json, data/raw/, data/text/, data/chunks.json"
+      }
+    },
+    {
+      "run": "20261111T174421Z",
+      "node": "Wiki Generation",
+      "started": "2026-11-11T17:44:23.951790+00:00",
+      "ended": "2026-11-11T17:44:23.964577+00:00",
+      "status": "success",
+      "result": {
+        "entries": 9,
+        "claims": 19,
+        "input": "content/knowledge.json (LLM-authored) + ingested chunks",
+        "output": "wiki/*.md + wiki/index.json"
+      }
+    },
+    {
+      "run": "20261111T174421Z",
+      "node": "Wiki Retrieval",
+      "started": "2026-11-11T17:44:23.964598+00:00",
+      "ended": "2026-11-11T17:44:23.969270+00:00",
+      "status": "success",
+      "result": {
+        "queries": 14,
+        "input": "Wiki index + lesson questions",
+        "output": "workflow/retrieval_results.json"
+      }
+    },
+    {
+      "run": "20261111T174421Z",
+      "node": "Outline",
+      "started": "2026-11-11T17:44:23.969287+00:00",
+      "ended": "2026-11-11T17:44:23.970129+00:00",
+      "status": "success",
+      "result": {
+        "slides": 14,
+        "input": "actual retrieval results + teaching brief",
+        "output": "workflow/outline.json + outline.md"
+      }
+    },
+    {
+      "run": "20261111T174421Z",
+      "node": "Fact Check",
+      "started": "2026-11-11T17:44:23.970143+00:00",
+      "ended": "2026-11-11T17:44:23.970582+00:00",
+      "status": "success",
+      "result": {
+        "claim_locator_errors": 0,
+        "input": "Wiki claims + full-text chunks + manifest",
+        "output": "workflow/fact_check.json"
+      }
+    },
+    {
+      "run": "20261111T174421Z",
+      "node": "Slide Generation",
+      "started": "2026-11-11T17:44:23.970595+00:00",
+      "ended": "2026-11-11T17:44:23.973654+00:00",
+      "status": "success",
+      "result": {
+        "input": "checked Wiki claims + retrieval-derived outline",
+        "output": "site/index.html, site/wiki.html, site/slides.html, assets"
+      }
+    },
+    {
+      "run": "20261111T174421Z",
+      "node": "HTML Validation",
+      "started": "2026-11-11T17:44:23.973667+00:00",
+      "ended": "2026-11-11T17:44:24.005275+00:00",
+      "status": "failed",
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\taicahw10\\\\tests\\\\query_results.json'",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\taicahw10\\scripts\\pipeline.py\", line 73, in main\n    result=execute(node)\n  File \"D:\\taicahw10\\scripts\\pipeline.py\", line 54, in execute\n    static=validate();browser=browser_run()\n  File \"D:\\taicahw10\\scripts\\validate.py\", line 39, in validate\n    (ROOT/'tests'/'query_results.json').write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding='utf-8')\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\user\\anaconda3\\Lib\\pathlib\\_local.py\", line 555, in write_text\n    return PathBase.write_text(self, data, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\user\\anaconda3\\Lib\\pathlib\\_abc.py\", line 651, in write_text\n    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\user\\anaconda3\\Lib\\pathlib\\_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\taicahw10\\\\tests\\\\query_results.json'\n",
+      "fallback": "Slide Generation",
+      "failure_count": 1,
+      "max_retries": 2
+    },
+    {
+      "run": "20261111T174421Z",
+      "node": "Slide Generation",
+      "started": "2026-11-11T17:44:24.009252+00:00",
+      "ended": "2026-11-11T17:44:24.011657+00:00",
+      "status": "success",
+      "result": {
+        "input": "checked Wiki claims + retrieval-derived outline",
+        "output": "site/index.html, site/wiki.html, site/slides.html, assets"
+      }
+    },
+    {
+      "run": "20261111T174421Z",
+      "node": "HTML Validation",
+      "started": "2026-11-11T17:44:24.011674+00:00",
+      "ended": "2026-11-11T17:44:24.035518+00:00",
+      "status": "failed",
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\taicahw10\\\\tests\\\\query_results.json'",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\taicahw10\\scripts\\pipeline.py\", line 73, in main\n    result=execute(node)\n  File \"D:\\taicahw10\\scripts\\pipeline.py\", line 54, in execute\n    static=validate();browser=browser_run()\n  File \"D:\\taicahw10\\scripts\\validate.py\", line 39, in validate\n    (ROOT/'tests'/'query_results.json').write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding='utf-8')\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\user\\anaconda3\\Lib\\pathlib\\_local.py\", line 555, in write_text\n    return PathBase.write_text(self, data, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\user\\anaconda3\\Lib\\pathlib\\_abc.py\", line 651, in write_text\n    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\user\\anaconda3\\Lib\\pathlib\\_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\taicahw10\\\\tests\\\\query_results.json'\n",
+      "fallback": "Slide Generation",
+      "failure_count": 2,
+      "max_retries": 2
+    },
+    {
+      "run": "20261111T174421Z",
+      "node": "Slide Generation",
+      "started": "2026-11-11T17:44:24.036824+00:00",
+      "ended": "2026-11-11T17:44:24.039293+00:00",
+      "status": "success",
+      "result": {
+        "input": "checked Wiki claims + retrieval-derived outline",
+        "output": "site/index.html, site/wiki.html, site/slides.html, assets"
+      }
+    },
+    {
+      "run": "20261111T174421Z",
+      "node": "HTML Validation",
+      "started": "2026-11-11T17:44:24.039308+00:00",
+      "ended": "2026-11-11T17:44:24.062521+00:00",
+      "status": "failed",
+      "error": "FileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\taicahw10\\\\tests\\\\query_results.json'",
+      "traceback": "Traceback (most recent call last):\n  File \"D:\\taicahw10\\scripts\\pipeline.py\", line 73, in main\n    result=execute(node)\n  File \"D:\\taicahw10\\scripts\\pipeline.py\", line 54, in execute\n    static=validate();browser=browser_run()\n  File \"D:\\taicahw10\\scripts\\validate.py\", line 39, in validate\n    (ROOT/'tests'/'query_results.json').write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding='utf-8')\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\user\\anaconda3\\Lib\\pathlib\\_local.py\", line 555, in write_text\n    return PathBase.write_text(self, data, encoding, errors, newline)\n           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\user\\anaconda3\\Lib\\pathlib\\_abc.py\", line 651, in write_text\n    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:\n         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\user\\anaconda3\\Lib\\pathlib\\_local.py\", line 537, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'D:\\\\taicahw10\\\\tests\\\\query_results.json'\n",
+      "fallback": "Slide Generation",
+      "failure_count": 3,
+      "max_retries": 2
+    }
+  ]
+}

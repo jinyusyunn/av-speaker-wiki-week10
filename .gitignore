@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+data/raw/
+data/text/
+data/chunks.json
+workflow/rejected_*
+.env
+node_modules/
+tests/query_cli_output.json
+deliverables/

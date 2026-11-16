@@ -1,0 +1,21 @@
+[
+  {
+    "time": "2026-11-11T17:37:57.430989+00:00",
+    "node": "Ingest / manual title audit",
+    "error": "S04 candidate 2103.14097 downloaded Impedance eigenvalues in linear elasticity; download success did not imply correct source identity.",
+    "action": "Reject and quarantine document, correct ID to 2107.06592, add first-page normalized-title gate before chunking.",
+    "resolved": true
+  },
+  {
+    "node": "Inspection",
+    "error": "UnicodeEncodeError: cp950 codec cannot encode character U+2217",
+    "action": "Set stdout encoding to UTF-8 in project scripts.",
+    "resolved": true
+  },
+  {
+    "node": "GitHub preflight",
+    "error": "gh command not found; current directory is not a git repository",
+    "action": "Use installed Git Credential Manager and GitHub REST API to verify login; target confirmation pending.",
+    "resolved": true
+  }
+]

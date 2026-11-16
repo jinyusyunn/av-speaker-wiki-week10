@@ -1,0 +1,334 @@
+{
+  "time": "2026-11-16T17:41:30.597289+00:00",
+  "engine": "Playwright Chromium 141 / real headless browser",
+  "passed": 65,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "desktop HTTP 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "initial one visible slide",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "first page counter",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "previous disabled at first",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "next button",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "previous button",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "keyboard right",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "keyboard left",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "keyboard PageDown",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "keyboard PageUp",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "keyboard End",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "next disabled at last",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "keyboard Home",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "hash deep link",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "quiz incorrect feedback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "quiz correct feedback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "citation navigates to existing Wiki claim",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wiki search TalkNet",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wiki Chinese alias search",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wiki no-result state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 1 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 1 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 2 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 2 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 3 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 3 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 4 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 4 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 5 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 5 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 6 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 6 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 7 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 7 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 8 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 8 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 9 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 9 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 10 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 10 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 11 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 11 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 12 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 12 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 13 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 13 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 14 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop slide 14 above controls",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "slide opaque after entry animation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 1 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 2 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 3 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 4 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 5 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 6 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 7 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 8 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 9 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 10 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 11 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 12 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 13 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile slide 14 no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile Wiki no horizontal overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "zero JavaScript page errors",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "javascript_errors": []
+}

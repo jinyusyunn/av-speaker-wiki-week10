@@ -1,0 +1,260 @@
+[
+  {
+    "id": "S01",
+    "arxiv_id": "2101.09624",
+    "title": "A review of speaker diarization: Recent advances with deep learning",
+    "url": "https://arxiv.org/abs/2101.09624",
+    "pdf_url": "https://arxiv.org/pdf/2101.09624",
+    "topic": "Speaker Diarization",
+    "ingest_status": "success",
+    "attempts": [
+      {
+        "attempt": 1,
+        "time": "2026-11-11T17:36:31.041750+00:00",
+        "status": "success",
+        "cache_used": false
+      }
+    ],
+    "scope": "full_pdf_text",
+    "pages": 29,
+    "characters": 168866,
+    "chunks": 170,
+    "sha256": "070d1222ff4489a32414a929b03ebc95843ada2e172714e92189789fb4104d05",
+    "raw_path": "data/raw/S01.pdf",
+    "text_path": "data/text/S01.json",
+    "retrieved_at": "2026-11-11T17:36:31.041750+00:00",
+    "cache_used": false,
+    "pdf_metadata": {
+      "/Author": "author",
+      "/CreationDate": "D:20211129021635Z",
+      "/Creator": "LaTeX with hyperref",
+      "/Keywords": "",
+      "/ModDate": "D:20211129021635Z",
+      "/PTEX.Fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+      "/Producer": "pdfTeX-1.40.21",
+      "/Subject": "",
+      "/Title": "A Review of Speaker Diarization: Recent Advances with Deep Learning",
+      "/Trapped": "/False"
+    }
+  },
+  {
+    "id": "S02",
+    "arxiv_id": "1906.10042",
+    "title": "Who said that?: Audio-visual speaker diarisation of real-world meetings",
+    "url": "https://arxiv.org/abs/1906.10042",
+    "pdf_url": "https://arxiv.org/pdf/1906.10042",
+    "topic": "Speaker Association",
+    "ingest_status": "success",
+    "attempts": [
+      {
+        "attempt": 1,
+        "time": "2026-11-11T17:36:31.041438+00:00",
+        "status": "success",
+        "cache_used": false
+      }
+    ],
+    "scope": "full_pdf_text",
+    "pages": 5,
+    "characters": 28717,
+    "chunks": 29,
+    "sha256": "249f260cfc806a5b64210012a17306167132072c7d486d9b814338593c8c5ea8",
+    "raw_path": "data/raw/S02.pdf",
+    "text_path": "data/text/S02.json",
+    "retrieved_at": "2026-11-11T17:36:31.041438+00:00",
+    "cache_used": false,
+    "pdf_metadata": {
+      "/Author": "",
+      "/CreationDate": "D:20190625010338Z",
+      "/Creator": "LaTeX with hyperref package",
+      "/Keywords": "",
+      "/ModDate": "D:20190625010338Z",
+      "/PTEX.Fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) kpathsea version 6.2.2",
+      "/Producer": "pdfTeX-1.40.17",
+      "/Subject": "",
+      "/Title": "",
+      "/Trapped": "/False"
+    }
+  },
+  {
+    "id": "S03",
+    "arxiv_id": "1901.01342",
+    "title": "AVA-ActiveSpeaker: An Audio-Visual Dataset for Active Speaker Detection",
+    "url": "https://arxiv.org/abs/1901.01342",
+    "pdf_url": "https://arxiv.org/pdf/1901.01342",
+    "topic": "Active Speaker Detection",
+    "ingest_status": "success",
+    "attempts": [
+      {
+        "attempt": 1,
+        "time": "2026-11-11T17:36:31.041700+00:00",
+        "status": "success",
+        "cache_used": false
+      }
+    ],
+    "scope": "full_pdf_text",
+    "pages": 15,
+    "characters": 59022,
+    "chunks": 63,
+    "sha256": "361b90273f39bb4b02c9ce9ea3accbfbbc21ee68f783b1a76e28ce76cd5127a2",
+    "raw_path": "data/raw/S03.pdf",
+    "text_path": "data/text/S03.json",
+    "retrieved_at": "2026-11-11T17:36:31.041700+00:00",
+    "cache_used": false,
+    "pdf_metadata": {
+      "/Author": "",
+      "/CreationDate": "D:20190528015503Z",
+      "/Creator": "LaTeX with hyperref package",
+      "/Keywords": "",
+      "/ModDate": "D:20190528015503Z",
+      "/PTEX.Fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) kpathsea version 6.2.2",
+      "/Producer": "pdfTeX-1.40.17",
+      "/Subject": "",
+      "/Title": "",
+      "/Trapped": "/False"
+    }
+  },
+  {
+    "id": "S04",
+    "arxiv_id": "2103.14097",
+    "title": "Is Someone Speaking? Exploring Long-term Temporal Features for Audio-visual Active Speaker Detection",
+    "url": "https://arxiv.org/abs/2103.14097",
+    "pdf_url": "https://arxiv.org/pdf/2103.14097",
+    "topic": "Active Speaker Detection / TalkNet",
+    "ingest_status": "success",
+    "attempts": [
+      {
+        "attempt": 1,
+        "time": "2026-11-11T17:36:31.041358+00:00",
+        "status": "success",
+        "cache_used": false
+      }
+    ],
+    "scope": "full_pdf_text",
+    "pages": 30,
+    "characters": 85346,
+    "chunks": 92,
+    "sha256": "611564d413ee62e094ca03fb779b2dd033fdadf7e449e9ef53c6b99dbad641ea",
+    "raw_path": "data/raw/S04.pdf",
+    "text_path": "data/text/S04.json",
+    "retrieved_at": "2026-11-11T17:36:31.041358+00:00",
+    "cache_used": false,
+    "pdf_metadata": {
+      "/Author": "",
+      "/CreationDate": "D:20220131023021Z",
+      "/Creator": "LaTeX with hyperref",
+      "/Keywords": "",
+      "/ModDate": "D:20220131023021Z",
+      "/PTEX.Fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+      "/Producer": "pdfTeX-1.40.21",
+      "/Subject": "",
+      "/Title": "",
+      "/Trapped": "/False"
+    }
+  },
+  {
+    "id": "S05",
+    "arxiv_id": "1602.00763",
+    "title": "Simple Online and Realtime Tracking",
+    "url": "https://arxiv.org/abs/1602.00763",
+    "pdf_url": "https://arxiv.org/pdf/1602.00763",
+    "topic": "Face Tracking / general object tracking",
+    "ingest_status": "success",
+    "attempts": [
+      {
+        "attempt": 1,
+        "time": "2026-11-11T17:36:32.568840+00:00",
+        "status": "success",
+        "cache_used": false
+      }
+    ],
+    "scope": "full_pdf_text",
+    "pages": 5,
+    "characters": 22941,
+    "chunks": 24,
+    "sha256": "2c6b0845f8eeabac5a5b1279949e302a181d7d6c8078a10cc4560fba06717d3b",
+    "raw_path": "data/raw/S05.pdf",
+    "text_path": "data/text/S05.json",
+    "retrieved_at": "2026-11-11T17:36:32.568840+00:00",
+    "cache_used": false,
+    "pdf_metadata": {
+      "/Producer": "dvips + GPL Ghostscript GIT PRERELEASE 9.08",
+      "/CreationDate": "D:20170709203858-04'00'",
+      "/ModDate": "D:20170709203858-04'00'",
+      "/Creator": "LaTeX with hyperref package",
+      "/Title": "",
+      "/Subject": "",
+      "/Author": "",
+      "/Keywords": ""
+    }
+  },
+  {
+    "id": "S06",
+    "arxiv_id": "1703.07402",
+    "title": "Simple Online and Realtime Tracking with a Deep Association Metric",
+    "url": "https://arxiv.org/abs/1703.07402",
+    "pdf_url": "https://arxiv.org/pdf/1703.07402",
+    "topic": "Face Tracking / general object tracking",
+    "ingest_status": "success",
+    "attempts": [
+      {
+        "attempt": 1,
+        "time": "2026-11-11T17:36:32.884715+00:00",
+        "status": "success",
+        "cache_used": false
+      }
+    ],
+    "scope": "full_pdf_text",
+    "pages": 5,
+    "characters": 22697,
+    "chunks": 23,
+    "sha256": "67ba5d7d68392a5b9a198ff42fdcb2655f9ea9a662b68aba6dc52d6de06802c4",
+    "raw_path": "data/raw/S06.pdf",
+    "text_path": "data/text/S06.json",
+    "retrieved_at": "2026-11-11T17:36:32.884715+00:00",
+    "cache_used": false,
+    "pdf_metadata": {
+      "/CreationDate": "D:20170323003211Z",
+      "/Creator": "TeX",
+      "/ModDate": "D:20170323003211Z",
+      "/PTEX.Fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) kpathsea version 6.2.2",
+      "/Producer": "pdfTeX-1.40.17",
+      "/Trapped": "/False"
+    }
+  },
+  {
+    "id": "S07",
+    "arxiv_id": "2111.14448",
+    "title": "AVA-AVD: Audio-Visual Speaker Diarization in the Wild",
+    "url": "https://arxiv.org/abs/2111.14448",
+    "pdf_url": "https://arxiv.org/pdf/2111.14448",
+    "topic": "Audio-Visual Speaker Diarization",
+    "ingest_status": "success",
+    "attempts": [
+      {
+        "attempt": 1,
+        "time": "2026-11-11T17:36:33.900597+00:00",
+        "status": "success",
+        "cache_used": false
+      }
+    ],
+    "scope": "full_pdf_text",
+    "pages": 12,
+    "characters": 63003,
+    "chunks": 65,
+    "sha256": "ae5c39755da12a0bf593e148d76802250bd23d20b3fe86113cddb8a55f012026",
+    "raw_path": "data/raw/S07.pdf",
+    "text_path": "data/text/S07.json",
+    "retrieved_at": "2026-11-11T17:36:33.900597+00:00",
+    "cache_used": false,
+    "pdf_metadata": {
+      "/CreationDate": "D:20220719003525Z",
+      "/Creator": "LaTeX with acmart 2020/09/13 v1.73 Typesetting articles for the Association for Computing Machinery and hyperref 2020-05-15 v7.00e Hypertext links for LaTeX",
+      "/ModDate": "D:20220719003525Z",
+      "/PTEX.Fullbanner": "This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+      "/Producer": "pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) kpathsea version 6.3.2",
+      "/Subject": "-  Information systems  ->  Multimedia information systems.",
+      "/Title": "AVA-AVD: Audio-Visual Speaker Diarization in the Wild",
+      "/Trapped": "/False"
+    }
+  }
+]

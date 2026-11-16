@@ -1,0 +1,327 @@
+[
+  {
+    "id": "diarization",
+    "title": "說話者分段：誰在何時說話？",
+    "aliases": [
+      "speaker diarization",
+      "who spoke when",
+      "說話者分段",
+      "只有聲音"
+    ],
+    "claims": [
+      {
+        "id": "C01",
+        "text": "Speaker diarization 把錄音依說話者分段與分群，回答誰在何時說話；標籤可用 Speaker A、B，不必先知道真實姓名。",
+        "source": "S01",
+        "anchor": "real identity",
+        "page": 1,
+        "chunk_id": "S01-p001-c02160",
+        "source_url": "https://arxiv.org/abs/2101.09624",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      },
+      {
+        "id": "C02",
+        "text": "典型模組包含語音活動偵測、聲音特徵或 embedding、分群與後處理；它與辨識說了什麼的 ASR 任務不同，但可以整合。",
+        "source": "S01",
+        "anchor": "clustering stage",
+        "page": 1,
+        "chunk_id": "S01-p001-c03240",
+        "source_url": "https://arxiv.org/abs/2101.09624",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      }
+    ],
+    "takeaway": "輸出是時間區間＋說話者標籤，不一定是逐字稿或真實姓名。",
+    "search_text": "說話者分段：誰在何時說話？ speaker diarization who spoke when 說話者分段 只有聲音 輸出是時間區間＋說話者標籤，不一定是逐字稿或真實姓名。 Speaker diarization 把錄音依說話者分段與分群，回答誰在何時說話；標籤可用 Speaker A、B，不必先知道真實姓名。 典型模組包含語音活動偵測、聲音特徵或 embedding、分群與後處理；它與辨識說了什麼的 ASR 任務不同，但可以整合。"
+  },
+  {
+    "id": "av-fusion",
+    "title": "視聽融合：讓聲音遇見畫面",
+    "aliases": [
+      "audio visual",
+      "AV pipeline",
+      "視聽融合",
+      "基本原理",
+      "為什麼聲音不夠"
+    ],
+    "claims": [
+      {
+        "id": "C03",
+        "text": "AV diarization 同時使用聲音與影像；AVA-AVD 將這個問題帶到電影與紀錄片等較複雜的場景。",
+        "source": "S07",
+        "anchor": "auditory and visual signals",
+        "page": 1,
+        "chunk_id": "S07-p001-c00000",
+        "source_url": "https://arxiv.org/abs/2111.14448",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      },
+      {
+        "id": "C04",
+        "text": "Who said that? 用嘴部動作與音訊的對應找出可用片段，再建立說話者模型；這是一個具體的視聽融合方法，並非所有系統都使用同一架構。",
+        "source": "S02",
+        "anchor": "audio-visual correspondence",
+        "page": 1,
+        "chunk_id": "S02-p001-c00000",
+        "source_url": "https://arxiv.org/abs/1906.10042",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      }
+    ],
+    "takeaway": "教學推論：聲音回答發聲特性，畫面補充可見人物線索；兩者都可能缺失。",
+    "search_text": "視聽融合：讓聲音遇見畫面 audio visual AV pipeline 視聽融合 基本原理 為什麼聲音不夠 教學推論：聲音回答發聲特性，畫面補充可見人物線索；兩者都可能缺失。 AV diarization 同時使用聲音與影像；AVA-AVD 將這個問題帶到電影與紀錄片等較複雜的場景。 Who said that? 用嘴部動作與音訊的對應找出可用片段，再建立說話者模型；這是一個具體的視聽融合方法，並非所有系統都使用同一架構。"
+  },
+  {
+    "id": "face-tracking",
+    "title": "Face Detection 與 Tracking：框與軌跡",
+    "aliases": [
+      "face detection",
+      "face tracking",
+      "SORT",
+      "Deep SORT",
+      "人臉偵測",
+      "人臉追蹤"
+    ],
+    "claims": [
+      {
+        "id": "C05",
+        "text": "Who said that? 將個別人臉偵測串成 face tracks；同篇另用臉部 embedding 比對參與者，說明追蹤與辨認身分是不同步驟。",
+        "source": "S02",
+        "anchor": "individual face detections",
+        "page": 3,
+        "chunk_id": "S02-p003-c01080",
+        "source_url": "https://arxiv.org/abs/1906.10042",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      },
+      {
+        "id": "C06",
+        "text": "SORT 是一般多物件追蹤方法，結合 Kalman Filter 與 Hungarian algorithm；可用來理解偵測後的跨幀關聯，但原論文不是專門的人臉追蹤模型。",
+        "source": "S05",
+        "anchor": "Hungarian algorithm",
+        "page": 1,
+        "chunk_id": "S05-p001-c00000",
+        "source_url": "https://arxiv.org/abs/1602.00763",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      },
+      {
+        "id": "C07",
+        "text": "Deep SORT 加入外觀資訊，改善遮擋下的軌跡關聯；原研究使用行人重識別資料，不能直接把其成績宣稱為人臉追蹤成績。",
+        "source": "S06",
+        "anchor": "appearance information",
+        "page": 1,
+        "chunk_id": "S06-p001-c00000",
+        "source_url": "https://arxiv.org/abs/1703.07402",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      }
+    ],
+    "takeaway": "Detection：這一幀的臉在哪？Tracking：連續幀中哪個框屬於同一條軌跡？",
+    "search_text": "Face Detection 與 Tracking：框與軌跡 face detection face tracking SORT Deep SORT 人臉偵測 人臉追蹤 Detection：這一幀的臉在哪？Tracking：連續幀中哪個框屬於同一條軌跡？ Who said that? 將個別人臉偵測串成 face tracks；同篇另用臉部 embedding 比對參與者，說明追蹤與辨認身分是不同步驟。 SORT 是一般多物件追蹤方法，結合 Kalman Filter 與 Hungarian algorithm；可用來理解偵測後的跨幀關聯，但原論文不是專門的人臉追蹤模型。 Deep SORT 加入外觀資訊，改善遮擋下的軌跡關聯；原研究使用行人重識別資料，不能直接把其成績宣稱為人臉追蹤成績。"
+  },
+  {
+    "id": "active-speaker",
+    "title": "Active Speaker Detection：可見的誰正在說話？",
+    "aliases": [
+      "active speaker detection",
+      "ASD",
+      "嘴巴",
+      "正在說話"
+    ],
+    "claims": [
+      {
+        "id": "C08",
+        "text": "ASD 在特定時間判斷某張可見人臉是否正在說話。AVA-ActiveSpeaker 對 face tracks 標示說話與否，以及聲音是否可聽見。",
+        "source": "S03",
+        "anchor": "whether the speech is audible",
+        "page": 1,
+        "chunk_id": "S03-p001-c00000",
+        "source_url": "https://arxiv.org/abs/1901.01342",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      },
+      {
+        "id": "C09",
+        "text": "單看嘴部動作可能把吃東西或表情誤認為說話；只偵測音訊中的語音，也不能直接連到畫面中的特定人物。",
+        "source": "S03",
+        "anchor": "eating, expressions",
+        "page": 1,
+        "chunk_id": "S03-p001-c03240",
+        "source_url": "https://arxiv.org/abs/1901.01342",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      }
+    ],
+    "takeaway": "ASD 是人臉軌跡上的說話活動判斷，不等於整部影片的說話者分群。",
+    "search_text": "Active Speaker Detection：可見的誰正在說話？ active speaker detection ASD 嘴巴 正在說話 ASD 是人臉軌跡上的說話活動判斷，不等於整部影片的說話者分群。 ASD 在特定時間判斷某張可見人臉是否正在說話。AVA-ActiveSpeaker 對 face tracks 標示說話與否，以及聲音是否可聽見。 單看嘴部動作可能把吃東西或表情誤認為說話；只偵測音訊中的語音，也不能直接連到畫面中的特定人物。"
+  },
+  {
+    "id": "talknet",
+    "title": "TalkNet：利用時間脈絡",
+    "aliases": [
+      "TalkNet",
+      "temporal",
+      "cross attention",
+      "時間脈絡"
+    ],
+    "claims": [
+      {
+        "id": "C10",
+        "text": "TalkNet 結合短期與長期視聽特徵，而非只根據單一瞬間做判斷。",
+        "source": "S04",
+        "anchor": "short-term and long-term",
+        "page": 1,
+        "chunk_id": "S04-p001-c00000",
+        "source_url": "https://arxiv.org/abs/2107.06592",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      },
+      {
+        "id": "C11",
+        "text": "TalkNet 使用音訊與視覺 temporal encoders、跨模態 cross-attention，以及捕捉長期線索的 self-attention。",
+        "source": "S04",
+        "anchor": "self-attention",
+        "page": 1,
+        "chunk_id": "S04-p001-c00000",
+        "source_url": "https://arxiv.org/abs/2107.06592",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      }
+    ],
+    "takeaway": "觀察一段時間的視聽關係，比把單張張嘴畫面直接當成說話更合理。",
+    "search_text": "TalkNet：利用時間脈絡 TalkNet temporal cross attention 時間脈絡 觀察一段時間的視聽關係，比把單張張嘴畫面直接當成說話更合理。 TalkNet 結合短期與長期視聽特徵，而非只根據單一瞬間做判斷。 TalkNet 使用音訊與視覺 temporal encoders、跨模態 cross-attention，以及捕捉長期線索的 self-attention。"
+  },
+  {
+    "id": "association",
+    "title": "Speaker-to-Person Association：聲音與人物配對",
+    "aliases": [
+      "speaker association",
+      "speaker to person",
+      "self enrollment",
+      "聲音人物配對",
+      "誰的聲音"
+    ],
+    "claims": [
+      {
+        "id": "C12",
+        "text": "Who said that? 先在嘴部清楚可見時找出說話片段，以這些片段自我註冊說話者模型；之後可利用聲音模型處理人物被遮住的時段。",
+        "source": "S02",
+        "anchor": "speaker is occluded",
+        "page": 1,
+        "chunk_id": "S02-p001-c03240",
+        "source_url": "https://arxiv.org/abs/1906.10042",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      },
+      {
+        "id": "C13",
+        "text": "AVA-AVD 明確包含完全不出現在畫面裡的說話者，故人物關聯不能假定每段聲音都一定有可見人臉。",
+        "source": "S07",
+        "anchor": "off-screen",
+        "page": 1,
+        "chunk_id": "S07-p001-c01080",
+        "source_url": "https://arxiv.org/abs/2111.14448",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      }
+    ],
+    "takeaway": "教學設計建議：輸出 track ID 或 unknown／off-screen；不要為了填滿表格而硬配人臉。",
+    "search_text": "Speaker-to-Person Association：聲音與人物配對 speaker association speaker to person self enrollment 聲音人物配對 誰的聲音 教學設計建議：輸出 track ID 或 unknown／off-screen；不要為了填滿表格而硬配人臉。 Who said that? 先在嘴部清楚可見時找出說話片段，以這些片段自我註冊說話者模型；之後可利用聲音模型處理人物被遮住的時段。 AVA-AVD 明確包含完全不出現在畫面裡的說話者，故人物關聯不能假定每段聲音都一定有可見人臉。"
+  },
+  {
+    "id": "applications",
+    "title": "案例與應用：會議與野外影片",
+    "aliases": [
+      "applications",
+      "meeting",
+      "AMI",
+      "案例",
+      "應用",
+      "會議"
+    ],
+    "claims": [
+      {
+        "id": "C14",
+        "text": "Who said that? 的研究情境是真實會議，輸入為環景影片及單聲道或多聲道音訊，並在 AMI meeting corpus 評估。",
+        "source": "S02",
+        "anchor": "AMI meeting corpus",
+        "page": 1,
+        "chunk_id": "S02-p001-c00000",
+        "source_url": "https://arxiv.org/abs/1906.10042",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      },
+      {
+        "id": "C15",
+        "text": "AVA-AVD 的案例包括電影與紀錄片；鏡頭內受訪者和畫外旁白，使聲音與可見人物的對應更具挑戰。",
+        "source": "S07",
+        "anchor": "narrator",
+        "page": 1,
+        "chunk_id": "S07-p001-c02160",
+        "source_url": "https://arxiv.org/abs/2111.14448",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      }
+    ],
+    "takeaway": "本專案只實作知識與教學流程；沒有訓練 AV 模型，也沒有對真實影片推論。",
+    "search_text": "案例與應用：會議與野外影片 applications meeting AMI 案例 應用 會議 本專案只實作知識與教學流程；沒有訓練 AV 模型，也沒有對真實影片推論。 Who said that? 的研究情境是真實會議，輸入為環景影片及單聲道或多聲道音訊，並在 AMI meeting corpus 評估。 AVA-AVD 的案例包括電影與紀錄片；鏡頭內受訪者和畫外旁白，使聲音與可見人物的對應更具挑戰。"
+  },
+  {
+    "id": "limitations",
+    "title": "限制：遮擋、噪音與畫外音",
+    "aliases": [
+      "limitations",
+      "challenge",
+      "off screen",
+      "限制",
+      "挑戰",
+      "遮擋"
+    ],
+    "claims": [
+      {
+        "id": "C16",
+        "text": "AVA-AVD 指出場景多樣、聲學條件複雜與畫外說話者都是難點；新增影像線索不代表所有時段都能改善。",
+        "source": "S07",
+        "anchor": "complicated acoustic conditions",
+        "page": 1,
+        "chunk_id": "S07-p001-c00000",
+        "source_url": "https://arxiv.org/abs/2111.14448",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      },
+      {
+        "id": "C17",
+        "text": "AVR-Net 使用與臉部可見性有關的 modality mask，示範模型如何考慮模態缺失，而非永遠假定看得到臉。",
+        "source": "S07",
+        "anchor": "modality mask",
+        "page": 1,
+        "chunk_id": "S07-p001-c01080",
+        "source_url": "https://arxiv.org/abs/2111.14448",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      }
+    ],
+    "takeaway": "工程建議：保留未知狀態、檢查視聽時間同步，並分別評估可見與畫外說話者。",
+    "search_text": "限制：遮擋、噪音與畫外音 limitations challenge off screen 限制 挑戰 遮擋 工程建議：保留未知狀態、檢查視聽時間同步，並分別評估可見與畫外說話者。 AVA-AVD 指出場景多樣、聲學條件複雜與畫外說話者都是難點；新增影像線索不代表所有時段都能改善。 AVR-Net 使用與臉部可見性有關的 modality mask，示範模型如何考慮模態缺失，而非永遠假定看得到臉。"
+  },
+  {
+    "id": "evaluation",
+    "title": "評估：分清楚在量測什麼",
+    "aliases": [
+      "evaluation",
+      "DER",
+      "false alarm",
+      "評估",
+      "錯誤率"
+    ],
+    "claims": [
+      {
+        "id": "C18",
+        "text": "DER 包含誤報語音、漏掉語音與說話者混淆三類錯誤；比較系統時必須說明邊界容許區間與重疊語音等評分設定。",
+        "source": "S01",
+        "anchor": "False alarm",
+        "page": 3,
+        "chunk_id": "S01-p003-c00000",
+        "source_url": "https://arxiv.org/abs/2101.09624",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      },
+      {
+        "id": "C19",
+        "text": "AVA-ActiveSpeaker 是 ASD 的資料集，判斷可見人臉的說話狀態；它的任務不能直接等同整體 diarization 或真實人物身分辨識。",
+        "source": "S03",
+        "anchor": "speaking or not",
+        "page": 1,
+        "chunk_id": "S03-p001-c00000",
+        "source_url": "https://arxiv.org/abs/1901.01342",
+        "review": "本次 Codex LLM 已閱讀全文相關段落並審閱繁中轉述；程式僅檢查定位與一致性，不等同語意真偽保證。"
+      }
+    ],
+    "takeaway": "本專案測的是來源、引用與網頁功能，沒有宣稱模型準確率。",
+    "search_text": "評估：分清楚在量測什麼 evaluation DER false alarm 評估 錯誤率 本專案測的是來源、引用與網頁功能，沒有宣稱模型準確率。 DER 包含誤報語音、漏掉語音與說話者混淆三類錯誤；比較系統時必須說明邊界容許區間與重疊語音等評分設定。 AVA-ActiveSpeaker 是 ASD 的資料集，判斷可見人臉的說話狀態；它的任務不能直接等同整體 diarization 或真實人物身分辨識。"
+  }
+]

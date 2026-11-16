@@ -1,0 +1,211 @@
+{
+  "passed": 41,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "at least five ingested full PDFs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S01 local PDF checksum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S01 text chunks have exact page offsets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S02 local PDF checksum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S02 text chunks have exact page offsets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S03 local PDF checksum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S03 text chunks have exact page offsets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S04 local PDF checksum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S04 text chunks have exact page offsets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S05 local PDF checksum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S05 text chunks have exact page offsets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S06 local PDF checksum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S06 text chunks have exact page offsets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S07 local PDF checksum",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "S07 text chunks have exact page offsets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all claims evidence and URLs consistent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "negative fixture: fake citation rejected",
+      "passed": true,
+      "detail": "Deliberately injected fixture; not an operational failure"
+    },
+    {
+      "name": "negative fixture: wrong source rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wiki query: 說話者分段",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wiki query: 人臉追蹤",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wiki query: active speaker detection",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wiki query: speaker association",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wiki query: TalkNet",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wiki query: DER",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wiki query: off screen 限制",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unknown Wiki query returns no hits",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "at least ten slides",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "every slide cites Wiki and claim",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "outline based on actual retrieval results",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "slide claims belong to Wiki",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html language/viewport/doctype",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "index.html unique IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "slides.html language/viewport/doctype",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "slides.html unique IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wiki.html language/viewport/doctype",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wiki.html unique IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all local resources and anchors valid",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "deck.js JavaScript syntax",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "wiki.js JavaScript syntax",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "public artifact excludes PDF/full extracted corpus",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Pages workflow exists",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

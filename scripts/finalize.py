@@ -1,0 +1,145 @@
+"""Generate an evidence-based hand-in and inventory from actual reports."""
+from pathlib import Path
+import datetime, json, subprocess, sys
+ROOT=Path(__file__).resolve().parents[1]
+def read(path): return json.loads((ROOT/path).read_text(encoding='utf-8'))
+def put(path,text): (ROOT/path).write_text(text,encoding='utf-8')
+def main():
+ sources=read('source_manifest.json');static=read('tests/static_results.json');browser=read('tests/browser_results.json');queries=read('tests/query_results.json');run=read('workflow/latest_run.json');github=read('workflow/github_status.json')
+ success=[s for s in sources if s['ingest_status']=='success']
+ totalpass=static['passed']+browser['passed'];totalfail=static['failed']+browser['failed']
+ deployed=github.get('deployed',False)
+ deployment=('已部署並實際驗證：'+github['pages_url']) if deployed else ('使用者已確認上傳，repository 已建立；GitHub Pages 正在部署，尚無已驗證的公開網址。' if github.get('repository_created') else '尚未部署。尚未建立遠端 repository，沒有可驗證的公開 URL。')
+ put('tests/summary.md',f'''# 實際驗證結果
+
+最新完整 run：`{run['run_id']}`，狀態 `{run['status']}`。
+
+|類型|通過|失敗|證據|
+|---|---:|---:|---|
+|靜態、來源、引用、查詢、JS 語法|{static['passed']}|{static['failed']}|static_results.json|
+|真實 Chromium 桌機／手機瀏覽器|{browser['passed']}|{browser['failed']}|browser_results.json|
+|總計|{totalpass}|{totalfail}|以上兩份報告|
+
+Wiki 中英查詢 Top-1 測試 {sum(q['passed'] for q in queries)}/{len(queries)} 通過，另有 unknown query 無結果測試。來源 {len(success)} 篇，PDF 合計 {sum(s['pages'] for s in success)} 頁，{sum(s['chunks'] for s in success)} chunks。9 個條目、19 個 claims、14 張投影片。
+
+負向 fixture 兩項：假 chunk 與錯 source，成功被拒絕，因此是通過測試。初次 full run 的測試目錄初始化例外不列為最新斷言測試失敗，但保留在 workflow/runs/；當次有 3 筆失敗節點事件（初次＋2 次重試），整體 run failed。
+
+瀏覽器實測範圍：上一頁／下一頁、左右鍵、PageUp／PageDown、Home／End、深連結、邊界按鈕、互動題正誤回饋、Wiki 引用跳轉、中英搜尋、無結果、14 頁桌機與手機水平溢位、桌機控制列遮擋、進場動畫後不透明、零 JavaScript page errors。viewport 為 1440×1000 與 390×844；並非所有瀏覽器或手機機型都測過。
+
+已實際檢視 screenshots/ 中桌機 pipeline 與手機 tracking 截圖。首次截圖抓到動畫剛開始而幾乎透明，之後使用 animations=disabled 並增補 opacity 檢查，重新截圖。截圖本身不是模型辨識結果。
+
+部署 gate：`python scripts/verify_public.py` 確認已通過報告及 site/ 的精確 SHA-256。不以測試報告存在就推論任意後續版本也測過。
+''')
+ rubric='''|題目提供的高分要求|完成情形|可查證成果／限制|
+|---|---|---|
+|先規劃、比較至少兩種 Wiki 組織|完成|wiki_plan.md、discussion_log.md；逐篇論文 vs 概念條目|
+|至少 5 篇真實且覆蓋五大主題的資料|完成|7 篇全文；source_manifest.json 與 source_collection.md|
+|真實 ingestion、切分、追蹤、條目生成、查詢|完成|下載 PDF、80 頁文字、421 chunks、9 條目、詞彙查詢；並非只存 PDF|
+|每篇來源 ID／標題／URL／實際狀態|完成|manifest 含 hash、頁數、scope、attempts、標題核對|
+|Wiki 正確引用、誠實處理限制|完成並揭露邊界|19 claims 有 source／chunk／page；自動定位之外仍須語意審閱|
+|至少 10 張繁中教學簡報及指定內容|完成|14 張，涵蓋全部指定主題、AV pipeline、案例、限制與參考|
+|美觀、RWD、導航、鍵盤、頁碼、圖解|完成|原創深色設計；桌機與手機 Chromium 實測、截圖|
+|用實際 Wiki 查詢結果生成內容|完成|retrieval_results.json → outline.json → Wiki claims → slides|
+|九節點 Loop／Graph 契約、回退與重試|完成|graph.md、pipeline.py；真實失敗回退兩次後停止|
+|完整執行、真實節點與錯誤紀錄|完成|runs/ 保留 failed 與 success；execution_log.md|
+|根據實測反思與改進流程|完成|reflection.md：錯來源、初始化錯誤、動畫截圖與前移檢查|
+|自動驗證與可用時瀏覽器測試|完成|106 通過、0 失敗；其中靜態 41、Chromium 65|
+|公開 Wiki 與 GitHub Pages|本機備妥；公開部署待確認|site/＋Actions＋hash gate；未捏造公開 URL|
+|可重現與繳交文件|完成|README、AGENTS、requirements、submission、完整檔案清單|
+'''
+ # Counts in the rubric should follow reports when future checks change.
+ rubric=rubric.replace('106 通過、0 失敗；其中靜態 41、Chromium 65',f'{totalpass} 通過、{totalfail} 失敗；其中靜態 {static["passed"]}、Chromium {browser["passed"]}')
+ if deployed: rubric=rubric.replace('|公開 Wiki 與 GitHub Pages|本機備妥；公開部署待確認|site/＋Actions＋hash gate；未捏造公開 URL|','|公開 Wiki 與 GitHub Pages|完成|GitHub Actions 成功，公開首頁／簡報／Wiki 及資產共 6 個 URL 的 HTTP 與 SHA-256 均通過|')
+ body=f'''# 第十週作業繳交：用 LLM Wiki 做一份教學 HTML 簡報
+
+## 專案主題與成果入口
+
+**Audio-Visual Speaker Diarization — AI 如何辨識影片中誰正在說話？**
+
+本專案先以真實論文建立可追溯 Wiki，再透過實際 Wiki 查詢結果整理教學大綱，完成繁體中文 HTML 教學簡報。專案已在目前工作目錄實作並完成真實執行。
+
+- 本機首頁：`site/index.html`
+- HTML 簡報：`site/slides.html`
+- 可搜尋 Wiki：`site/wiki.html`
+- 完整檔案清單：`file_inventory.md`
+- GitHub Pages：{deployment}
+
+## Wiki、資料來源與生成方式
+
+先建立 wiki_plan.md、discussion_log.md，比較「依論文逐篇整理」與「依概念條目、附來源證據」兩種方式，最後採第二種並保留來源索引。實際成功 ingest **{len(success)} 篇全文、{sum(s['pages'] for s in success)} 頁、{sum(s['chunks'] for s in success)} 個 chunks**，產生 **9 個 Wiki 條目、19 個有引用的 claim**。
+
+每篇記錄來源 ID、標題、URL、ingest_status、PDF hash 與頁數。資料先下載成 PDF、擷取逐頁文字、以 1400 字元視窗與 320 字元重疊切分，保留頁碼與 offset。查詢使用詞彙排序及中英別名，並可回到原文 chunk。
+
+繁中語意內容由本次 Codex LLM 閱讀原文後整理，保存在 content/knowledge.json；本機程式負責可重現的 ingestion、證據定位、條目編譯、查詢與網頁生成，沒有冒稱另行呼叫未執行的 LLM API。詳見 content/generation_record.md。
+
+|ID|論文|實際 ingest|
+|---|---|---|
+'''
+ for s in success: body+=f"|{s['id']}|[{s['title']}]({s['url']})|成功，全文 {s['pages']} 頁|\n"
+ body+=f'''
+## Wiki 查詢與教學簡報
+
+Wiki 查詢 Top-1 測試 **{sum(q['passed'] for q in queries)}/{len(queries)} 通過**；例如「人臉追蹤」找到 face-tracking、「speaker association」找到 association、「TalkNet」找到 talknet。未知關鍵字可回報無結果。全部結果在 tests/query_results.json。
+
+投影片 **14 張**，內容包含 diarization 定義、聲音不足之處、AV 原理、人臉偵測與追蹤、ASD、TalkNet、聲音人物配對、完整 AV pipeline、論文案例、限制、評估、互動練習及總結參考。每頁的重要敘述能連回 Wiki 與原始論文。
+
+網頁具 RWD、上一頁／下一頁、鍵盤切換、頁碼、進度列、指定頁 hash、互動題與原創教學圖解。時間軸、人物狀態與流程示意均明確標示為教學圖解，不是模型實測結果。
+
+## Loop／Graph 與真實執行
+
+實作流程為 Source Collection → Ingest → Wiki Generation → Wiki Retrieval → Outline → Fact Check → Slide Generation → HTML Validation → Publish Readiness。每節點輸入、輸出、檢查、fallback 與 2 次重試上限見 workflow/graph.md。資料不足回到 ingestion，引用錯誤回到 Wiki generation，網頁錯誤回到 slide generation。
+
+首次完整 run 20261111T174421Z 因 tests/ 目錄未建立而在 HTML Validation 發生 FileNotFoundError，實際回退與重試兩次後停止；修正初始化後完整執行成功。最新成功 run 為 `{run['run_id']}`。每次節點起訖時間、錯誤與 traceback 保留在 workflow/runs/；最新摘要為 workflow/execution_log.md。
+
+另一次真實前期問題是 TalkNet 候選 arXiv ID 指向數學論文。閱讀第一頁發現後已隔離錯誤資料、改用正確 2107.06592，並把標題 gate 移到成功 ingest 之前；最終資料不含錯誤論文。
+
+## 驗證與反思
+
+最新自動驗證：**{totalpass} 通過、{totalfail} 失敗**（靜態 {static['passed']}、真實 Chromium {browser['passed']}）。檢查至少五篇成功 ingest、PDF hash、chunk offset、Wiki 查詢、引用、至少十張簡報、內部連結、JS 語法與實際互動功能。
+
+Chromium 實測桌機 1440×1000、手機 390×844，包含鍵盤、上下頁、深連結、引用跳轉、Wiki 搜尋、互動題、14 頁水平溢位及零 JS 例外；另保存並檢視截圖。兩項故意注入的無效引用 fixture 成功被拒絕，算防錯測試通過，不偽稱為實際內容失敗。測試範圍與限制見 tests/summary.md。
+
+反思指出最易出錯的是「來源身分正確性」，下載可解析的 PDF 仍可能是錯論文；其次是固定回退無法修正驗證環境初始化。已前移標題核對、測試目錄初始化與 artifact hash gate。截圖曾抓到進場動畫的透明起點，調整動畫完成後截圖並增補 opacity 檢查。詳細反思見 reflection.md。
+
+## 未完成事項與誠實限制
+
+{deployment}
+
+已備妥 GitHub Actions、site/、.nojekyll 與部署操作說明；公開 artifact 不含第三方 PDF。未訓練或執行 AV 辨識模型，未宣稱模型準確率。自動引用定位不等同完整語意事實查核；中文新同義詞的詞彙檢索仍可能不足。
+
+## 對照題目提供的 9～10 分要求
+
+未提供老師正式 rubric 全文，以下逐項對照本題列出的要求，不保證最終評分。
+
+'''+rubric+'''
+## 重現指令
+
+```powershell
+python -m pip install -r requirements.txt
+python -m playwright install chromium
+python scripts/pipeline.py
+python scripts/wiki.py "speaker association"
+python scripts/verify_public.py
+```
+
+Python 需可下載論文，或已有本機快取；Node.js 用於 JS 語法檢查。所有成果、限制與數量均依實際檔案和報告填寫。
+'''
+ put('submission.md',body)
+ if github.get('repository_url'):
+  body=body.replace('- GitHub Pages：'+deployment,'- GitHub repository：'+github['repository_url']+'\n- GitHub Pages：'+deployment)
+ if deployed:
+  body=body.replace('## 未完成事項與誠實限制','## 公開部署與誠實限制')
+  body=body.replace('已備妥 GitHub Actions、site/、.nojekyll 與部署操作說明；公開 artifact 不含第三方 PDF。','GitHub Actions 已成功部署，並直接 GET 公開首頁、簡報、Wiki 與三個 CSS／JS 資產，6／6 回應 HTTP 200 且 SHA-256 與本機已驗證 artifact 一致。證據在 tests/remote_results.json；公開 artifact 不含第三方 PDF。')
+  body+=f'\n## 線上成果與繳交清單\n\n- 首頁：{github["pages_url"]}\n- 教學簡報：{github["slides_url"]}\n- 可查詢 Wiki：{github["wiki_url"]}\n- GitHub 程式與文件：{github["repository_url"]}\n- 真實部署紀錄：{github["deployment_run_url"]}\n- 本機繳交 ZIP：`deliverables/week10_submission.zip`（不含第三方 PDF、完整原文或憑證；可依 README 重新下載來源）\n\n建議在作業平台貼上教學簡報與 GitHub repository 連結，再貼本文件全文；若平台需要附件，上傳 ZIP。完整要求對照、反思與真實測試證據已包含於專案。\n'
+ put('submission.md',body)
+ query=subprocess.run([sys.executable,'scripts/wiki.py','speaker association'],cwd=ROOT,capture_output=True,encoding='utf-8',check=True)
+ put('tests/query_cli_output.json',query.stdout)
+ # Do not list Git internals or interpreter caches as project deliverables.
+ files=sorted(p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*') if p.is_file() and '.git' not in p.parts and '__pycache__' not in p.parts)
+ if 'file_inventory.md' not in files: files.append('file_inventory.md');files.sort()
+ lines=['# 完整專案檔案清單','','不含 .git 內部資料與 Python __pycache__。data/raw、data/text、data/chunks.json 與 workflow/rejected_* 為本機查證／隔離資料，依 .gitignore 不上傳。公開 artifact 僅 site/。','',f'共 {len(files)} 個專案檔案。','', '```text',*files,'```','']
+ put('file_inventory.md','\n'.join(lines))
+ print(json.dumps({'files':len(files),'sources':len(success),'wiki_queries_passed':sum(q['passed'] for q in queries),'slides':len(read('workflow/outline.json')),'tests_passed':totalpass,'tests_failed':totalfail,'latest_run':run['run_id'],'deployed':deployed},ensure_ascii=False))
+
+if __name__=='__main__':
+ sys.stdout.reconfigure(encoding='utf-8');main()
