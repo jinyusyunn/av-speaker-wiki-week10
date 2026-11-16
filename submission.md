@@ -100,7 +100,7 @@ Python 需可下載論文，或已有本機快取；Node.js 用於 JS 語法檢�
 - 教學簡報：https://jinyusyunn.github.io/av-speaker-wiki-week10/slides.html
 - 可查詢 Wiki：https://jinyusyunn.github.io/av-speaker-wiki-week10/wiki.html
 - GitHub 程式與文件：https://github.com/jinyusyunn/av-speaker-wiki-week10
-- 真實部署紀錄：https://github.com/jinyusyunn/av-speaker-wiki-week10/actions/runs/43921457845
+- 真實部署紀錄：https://github.com/jinyusyunn/av-speaker-wiki-week10/actions/runs/43921736848
 - 本機繳交 ZIP：`deliverables/week10_submission.zip`（不含第三方 PDF、完整原文或憑證；可依 README 重新下載來源）
 
 建議在作業平台貼上教學簡報與 GitHub repository 連結，再貼本文件全文；若平台需要附件，上傳 ZIP。完整要求對照、反思與真實測試證據已包含於專案。

@@ -80,5 +80,51 @@
         "sha256_matches_local": true
       }
     ]
+  },
+  {
+    "time": "2026-11-16T17:45:40.422040+00:00",
+    "action": "git_push",
+    "commit": "93c7a898c2d23077ae6f3e3300d79f4f81401a65",
+    "branch": "main",
+    "files_changed": 16,
+    "repository_url": "https://github.com/jinyusyunn/av-speaker-wiki-week10"
+  },
+  {
+    "time": "2026-11-16T17:46:05.187884+00:00",
+    "action": "public_pages_verified",
+    "pages_url": "https://jinyusyunn.github.io/av-speaker-wiki-week10/",
+    "actions_run_url": "https://github.com/jinyusyunn/av-speaker-wiki-week10/actions/runs/43921736848",
+    "checks": [
+      {
+        "path": "index.html",
+        "http_status": 200,
+        "sha256_matches_local": true
+      },
+      {
+        "path": "slides.html",
+        "http_status": 200,
+        "sha256_matches_local": true
+      },
+      {
+        "path": "wiki.html",
+        "http_status": 200,
+        "sha256_matches_local": true
+      },
+      {
+        "path": "assets/style.css",
+        "http_status": 200,
+        "sha256_matches_local": true
+      },
+      {
+        "path": "assets/deck.js",
+        "http_status": 200,
+        "sha256_matches_local": true
+      },
+      {
+        "path": "assets/wiki.js",
+        "http_status": 200,
+        "sha256_matches_local": true
+      }
+    ]
   }
 ]
